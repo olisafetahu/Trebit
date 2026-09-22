@@ -1,15 +1,25 @@
+import {
+  BriefcaseBusiness,
+  Gem,
+  HeartPulse,
+  Scissors,
+  ShoppingBag,
+  Sparkles,
+  Store,
+  Warehouse,
+} from "lucide-react"
 import { useI18n } from "../i18n"
 import { useReveal } from "../hooks/useReveal"
 
-const glyphs: Record<string, string> = {
-  services: "◇",
-  barbers: "✂",
-  salons: "✦",
-  freeshop: "◈",
-  boutiques: "▣",
-  pharmacy: "✚",
-  markets: "▦",
-  retail: "▢",
+const glyphs = {
+  services: BriefcaseBusiness,
+  barbers: Scissors,
+  salons: Sparkles,
+  freeshop: Gem,
+  boutiques: ShoppingBag,
+  pharmacy: HeartPulse,
+  markets: Warehouse,
+  retail: Store,
 }
 
 export function Industries() {
@@ -26,7 +36,10 @@ export function Industries() {
         {keys.map((key) => (
           <article key={key} className="industry-card">
             <span className="industry-glyph" aria-hidden="true">
-              {glyphs[key]}
+              {(() => {
+                const Icon = glyphs[key]
+                return <Icon size={24} strokeWidth={1.7} />
+              })()}
             </span>
             <h3>{t.industries.items[key].title}</h3>
             <p>{t.industries.items[key].text}</p>

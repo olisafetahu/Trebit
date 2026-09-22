@@ -1,14 +1,16 @@
+import { Cloud, ShieldCheck, ChartNoAxesColumn, Headphones } from "lucide-react"
 import { useI18n } from "../i18n"
 import { useReveal } from "../hooks/useReveal"
 
 export function Security() {
   const { t } = useI18n()
   const { ref, visible } = useReveal<HTMLElement>()
+
   const items = [
-    { icon: "☁️", ...t.security.items.cloud },
-    { icon: "🛡️", ...t.security.items.data },
-    { icon: "📊", ...t.security.items.reports },
-    { icon: "🎧", ...t.security.items.support },
+    { icon: Cloud, ...t.security.items.cloud },
+    { icon: ShieldCheck, ...t.security.items.data },
+    { icon: ChartNoAxesColumn, ...t.security.items.reports },
+    { icon: Headphones, ...t.security.items.support },
   ]
 
   return (
@@ -16,14 +18,19 @@ export function Security() {
       <div className="section-head">
         <h2>{t.security.title}</h2>
       </div>
+
       <div className="secure-grid">
-        {items.map((item) => (
-          <article key={item.title} className="secure-card">
-            <span>{item.icon}</span>
-            <h3>{item.title}</h3>
-            <p>{item.text}</p>
-          </article>
-        ))}
+        {items.map((item) => {
+          const Icon = item.icon
+
+          return (
+            <article key={item.title} className="secure-card">
+              <Icon size={32} strokeWidth={1.8} />
+              <h3>{item.title}</h3>
+              <p>{item.text}</p>
+            </article>
+          )
+        })}
       </div>
     </section>
   )

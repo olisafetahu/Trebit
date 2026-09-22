@@ -530,7 +530,8 @@ h3,
 }
 
 .strip-icon {
-  font-size: 1.3rem;
+  display: inline-flex;
+  color: var(--brand);
 }
 
 .strip-card h3,
@@ -584,7 +585,7 @@ h3,
 }
 
 .industry-glyph {
-  font-size: 1.4rem;
+  display: inline-flex;
   color: var(--brand);
 }
 

@@ -1,3 +1,4 @@
+import { ShieldCheck, TrendingUp, Wallet, Zap } from "lucide-react"
 import { useI18n } from "../i18n"
 import { useReveal } from "../hooks/useReveal"
 
@@ -5,10 +6,10 @@ export function TrustStrip() {
   const { t } = useI18n()
   const { ref, visible } = useReveal<HTMLElement>()
   const items = [
-    { icon: "⚡", ...t.values.efficiency },
-    { icon: "💰", ...t.values.cost },
-    { icon: "🛡️", ...t.values.security },
-    { icon: "📈", ...t.values.growth },
+    { icon: Zap, ...t.values.efficiency },
+    { icon: Wallet, ...t.values.cost },
+    { icon: ShieldCheck, ...t.values.security },
+    { icon: TrendingUp, ...t.values.growth },
   ]
 
   return (
@@ -16,7 +17,7 @@ export function TrustStrip() {
       <div className="strip-grid">
         {items.map((item) => (
           <article key={item.title} className="strip-card">
-            <span className="strip-icon">{item.icon}</span>
+            <span className="strip-icon"><item.icon size={26} strokeWidth={1.8} /></span>
             <h3>{item.title}</h3>
             <p>{item.text}</p>
           </article>
