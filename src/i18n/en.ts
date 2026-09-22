@@ -1,0 +1,185 @@
+import type { Dictionary } from "./types"
+
+export const en: Dictionary = {
+  meta: {
+    title: "Trebit – Modern software for business management",
+    description:
+      "Trebit is a modern platform for sales, fiscalization, stock, finance, reporting and business management in Kosovo.",
+    keywords:
+      "business software, sales software, fiscalization Kosovo, stock management, market software, pharmacy software, POS Kosovo",
+  },
+  nav: {
+    product: "Product",
+    solutions: "Solutions",
+    packages: "Packages",
+    businesses: "For businesses",
+    about: "About",
+    contact: "Contact",
+    login: "Log in",
+    demo: "Request a demo",
+  },
+  loginModal: {
+    title: "Log in to Trebit",
+    text: "Customer login will be connected here when the platform is ready. In the meantime, request a demo and our team will guide you.",
+    close: "Close",
+  },
+  hero: {
+    eyebrow: "One platform. Everything for your business.",
+    headlineA: "Run your business.",
+    headlineB: "Easier. Faster. Smarter.",
+    supporting:
+      "Trebit is the modern platform for sales, stock, finance and day-to-day operations — all in one system.",
+    primary: "Request a demo",
+    secondary: "See packages",
+    trust: "Built for the needs of businesses in Kosovo.",
+    floats: {
+      sales: "Sales",
+      stock: "Stock",
+      finance: "Finance",
+      reports: "Reports",
+      fiscal: "Fiscalization",
+    },
+  },
+  values: {
+    efficiency: { title: "More efficiency", text: "Automate processes and save time." },
+    cost: { title: "Lower cost", text: "Do more with fewer resources." },
+    security: { title: "More security", text: "Business data kept protected and organised." },
+    growth: { title: "Room to grow", text: "Tools that scale with your business." },
+  },
+  product: {
+    title: "Everything your business needs, in one platform.",
+    items: {
+      sales: { title: "Sales", text: "Manage sales and invoicing quickly and in order." },
+      fiscal: { title: "Fiscalization", text: "Integrated fiscalization tailored for businesses in Kosovo." },
+      stock: { title: "Stock", text: "Control items, quantities, warehouses and stock movements." },
+      finance: { title: "Finance", text: "Keep business financial data and reports under control." },
+      logistics: { title: "Logistics", text: "Manage product processes and movements." },
+      orders: { title: "Orders", text: "Organise orders and the sales process." },
+      reports: { title: "Reports", text: "See live business data and make better decisions." },
+      channels: { title: "Digital channels", text: "Connect the business to modern digital channels." },
+    },
+  },
+  industries: {
+    title: "One solution for many kinds of business.",
+    cta: "Find the fit for your business",
+    items: {
+      services: { title: "Services", text: "Invoices, clients and schedules in one place." },
+      barbers: { title: "Barbers", text: "Fast till sales, products and services, with a clear end-of-day view." },
+      salons: { title: "Beauty salons", text: "Services, products, stock and payments without interrupting the client." },
+      freeshop: { title: "Free Shop", text: "Stock, pricing and sales control in high-traffic spaces." },
+      boutiques: { title: "Boutiques", text: "Items, sizes, colours and seasons — organised for calmer selling." },
+      pharmacy: { title: "Pharmacies", text: "Accurate stock, expiry and regular sales for pharmacy pace." },
+      markets: { title: "Markets", text: "A fast till, live stock and a clear view of the sales day." },
+      retail: { title: "Retail stores", text: "From till to warehouse: one system that keeps the shop in order." },
+    },
+  },
+  pricing: {
+    title: "Choose the package that fits your business.",
+    subtitle: "Start with what you need today and grow Trebit as the business grows.",
+    contactPrice: "Contact us for pricing",
+    requestQuote: "Request a quote",
+    popular: "Most chosen",
+    items: {
+      basic: {
+        name: "Basic",
+        description: "Simple and efficient for getting started.",
+        features: ["Sales", "Fiscalization", "Item management", "Basic reports", "Easy to use"],
+        cta: "Choose Basic",
+      },
+      standard: {
+        name: "Standard",
+        description: "More capability for a growing business.",
+        features: ["Items and categories", "Parties (customers/suppliers)", "Purchases and stock", "Sales – Fiscalization", "Advanced reports"],
+        cta: "Choose Standard",
+      },
+      plus: {
+        name: "Plus",
+        description: "An extended solution for developing businesses.",
+        features: ["Everything in Standard", "Multi-branch management", "Stock and transfers", "Financial reports", "Device/payment integrations", "Multiple users"],
+        cta: "Choose Plus",
+      },
+      enterprise: {
+        name: "Enterprise",
+        description: "For larger businesses and special requirements.",
+        features: ["All capabilities", "Custom integrations", "Advanced roles and permissions", "Dedicated reports", "Priority support"],
+        cta: "Talk to the team",
+      },
+    },
+  },
+  how: {
+    title: "How Trebit works",
+    steps: [
+      { title: "Choose a package", text: "Find the capabilities that match your business." },
+      { title: "Configure Trebit", text: "Adapt the system to how the business actually works." },
+      { title: "Run and grow", text: "Control sales, stock, finance and reports from one place." },
+    ],
+  },
+  dashboard: {
+    title: "See your business, in one view.",
+    subtitle: "Daily sales, stock, alerts and financial reports — clear, in real time.",
+    kpis: [
+      { label: "Sales today", value: "€4,280", delta: "+12%" },
+      { label: "Weekly revenue", value: "€28,640", delta: "+8%" },
+      { label: "Items in stock", value: "1,240", delta: "stable" },
+      { label: "Low stock", value: "7", delta: "watch" },
+    ],
+    chartTitle: "Sales trend",
+    stockTitle: "Stock alerts",
+    txTitle: "Recent transactions",
+    lowStock: "Low quantity",
+  },
+  security: {
+    title: "Your business, always under control.",
+    items: {
+      cloud: { title: "Cloud", text: "Business data available whenever you need it." },
+      data: { title: "Data security", text: "Infrastructure built for security and reliability." },
+      reports: { title: "Real-time reports", text: "See performance without waiting." },
+      support: { title: "Local support", text: "Get help from Trebit’s local team." },
+    },
+  },
+  about: {
+    title: "About Trebit",
+    text: "Trebit is a modern business-management solution, created to help companies work more simply, more organised and more efficiently. From the day’s till to the month’s reports, Trebit keeps operations connected — without making the work heavier.",
+    kubit: "Trebit is a business unit of KuBIT, built specifically for companies that want a clear, fast platform ready to grow.",
+  },
+  cta: {
+    title: "Ready to run the business differently?",
+    text: "See how Trebit can simplify the way your business works.",
+    demo: "Request a demo",
+    contact: "Contact us",
+  },
+  contact: {
+    title: "Tell us about your business",
+    text: "Send a request and the Trebit team will follow up with the next step — a demo, a package, or a short conversation.",
+    name: "Full name",
+    business: "Business name",
+    phone: "Phone number",
+    email: "Email",
+    type: "Business type",
+    package: "Package of interest",
+    message: "Message",
+    submit: "Send request",
+    success: "Thank you. Your request was saved. The Trebit team will contact you once communication channels are active.",
+    types: ["Services", "Barber", "Beauty salon", "Free Shop", "Boutique", "Pharmacy", "Market", "Retail", "Other"],
+    websiteLabel: "Website",
+    emailLabel: "Email",
+    phoneLabel: "Phone",
+    comingSoon: "Coming soon",
+  },
+  footer: {
+    blurb: "Modern software for business management.",
+    privacy: "Privacy",
+    terms: "Terms of use",
+    kubit: "Trebit is part of the KuBIT ecosystem.",
+    copyright: "© 2026 Trebit. All rights reserved.",
+  },
+  legal: {
+    privacyTitle: "Privacy policy",
+    privacyBody:
+      "Trebit respects the privacy of data you send through this website. Form data is used only to respond to your demo or information request. This page will be updated with the full legal policy before public launch.",
+    termsTitle: "Terms of use",
+    termsBody:
+      "The content of this website is owned by Trebit. Product and package descriptions are informational. Full service terms will be published before customer contracts go live.",
+    back: "Back to home",
+  },
+}
