@@ -9,7 +9,7 @@ export const sq: Dictionary = {
       "softuer për biznes, program për biznes, program për shitje, fiskalizim Kosovë, menaxhim stoku, program për market, program për farmaci, POS Kosovë, softuer për shitje, menaxhim biznesi, softuer biznesi Kosovë",
   },
   nav: {
-    product: "Produkti",
+    product: "Produktet",
     solutions: "Zgjidhjet",
     packages: "Pakot",
     businesses: "Për biznese",
@@ -98,10 +98,10 @@ export const sq: Dictionary = {
   productPage: {
     eyebrow: "Zgjidhje për biznesin",
     title: "Teknologjia e duhur për mënyrën si punon biznesi yt.",
-    intro: "Trebit bashkon softuerin që organizon operacionet me harduerin e besueshëm që e bën punën e përditshme më të shpejtë dhe më të sigurt.",
+    intro: "Trebit bashkon softuerin që organizon operacionet me hardware-in e besueshëm që e bën punën e përditshme më të shpejtë dhe më të sigurt.",
     software: { label: "Software", title: "Një platformë për punën e përditshme.", text: "Nga shitjet dhe fiskalizimi deri te stoku, raportet dhe operacionet e menaxhuara IT, çdo proces lidhet në një sistem të vetëm." },
     hardware: {
-      label: "Harduer", title: "Pajisje të gatshme për çdo pikë pune.", text: "Përzgjedhim, konfigurojmë dhe mbështesim pajisjet që i duhen biznesit tënd, nga arka deri te rrjeti.",
+      label: "Hardware", title: "Pajisje të gatshme për çdo pikë pune.", text: "Përzgjedhim, konfigurojmë dhe mbështesim pajisjet që i duhen biznesit tënd, nga arka deri te rrjeti.",
       items: [
         { title: "POS, PC, PDA, tablet, printer dhe skaner", text: "Pajisje të përzgjedhura për shitje, administrim, lëvizje në terren dhe printim të shpejtë e të saktë." },
         { title: "Network, WiFi, firewall dhe UPS", text: "Rrjet i qëndrueshëm dhe i mbrojtur, me lidhje të besueshme dhe energji rezervë për vazhdimësi në punë." },

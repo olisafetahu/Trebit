@@ -6,7 +6,7 @@ type LogoProps = {
 export function Logo({ compact, onDark }: LogoProps) {
   const gradientId = onDark ? "tb-g-dark" : "tb-g"
   return (
-    <a href="#kryesore" className={`logo ${onDark ? "logo--on-dark" : ""}`} aria-label="Trebit">
+    <a href="/" className={`logo ${onDark ? "logo--on-dark" : ""}`} aria-label="Trebit">
       <svg className="logo-mark" viewBox="0 0 40 40" aria-hidden="true">
         <defs>
           <linearGradient id={gradientId} x1="8" y1="4" x2="34" y2="36" gradientUnits="userSpaceOnUse">

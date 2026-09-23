@@ -9,7 +9,7 @@ export const en: Dictionary = {
       "business software, sales software, fiscalization Kosovo, stock management, market software, pharmacy software, POS Kosovo",
   },
   nav: {
-    product: "Product",
+    product: "Products",
     solutions: "Solutions",
     packages: "Packages",
     businesses: "For businesses",
