@@ -3,7 +3,7 @@ import { scrollToId } from "../hooks/scrollToId"
 import { useI18n } from "../i18n"
 
 const links = [
-  { href: "#produkti", key: "product" as const },
+  { href: "/produkti", key: "product" as const },
   { href: "#zgjidhjet", key: "solutions" as const },
   { href: "#pakot", key: "packages" as const },
   { href: "#biznese", key: "businesses" as const },
@@ -32,6 +32,7 @@ export function Header({ scrolled, open, onToggle, onLogin }: HeaderProps) {
               key={link.href}
               href={link.href}
               onClick={(event) => {
+                if (!link.href.startsWith("#")) return
                 event.preventDefault()
                 if (open) onToggle()
                 scrollToId(link.href)

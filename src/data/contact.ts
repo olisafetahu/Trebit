@@ -1,6 +1,6 @@
 export const contact = {
-  website: "www.trebit-ks.com",
-  websiteUrl: "https://www.trebit-ks.com",
+  website: "www.kubit-ks.com",
+  websiteUrl: "https://www.kubit-ks.com",
   email: "",
   phone: "",
   social: {

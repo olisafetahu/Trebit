@@ -59,6 +59,21 @@ export const en: Dictionary = {
       channels: { title: "Digital channels", text: "Connect the business to modern digital channels." },
     },
   },
+  productPage: {
+    eyebrow: "Business solutions",
+    title: "The right technology for the way your business works.",
+    intro: "Trebit brings together the software that organises operations and the reliable hardware that makes everyday work faster and safer.",
+    software: { label: "Software", title: "One platform for everyday work.", text: "From sales and fiscalisation to stock, reporting and managed IT operations, every process connects in one system." },
+    hardware: {
+      label: "Hardware", title: "Equipment ready for every point of work.", text: "We select, configure and support the equipment your business needs, from the till to the network.",
+      items: [
+        { title: "POS, PC, PDA, tablet, printer and scanner", text: "Equipment selected for sales, administration, field work and fast, accurate printing." },
+        { title: "Network, WiFi, firewall and UPS", text: "Stable, protected networking with dependable connectivity and backup power for business continuity." },
+        { title: "Standardisation and lifecycle management", text: "Consistent configuration, a clear inventory, updates and planning for every stage of a device’s life." },
+        { title: "Hardware as a Service", text: "Equipment, configuration, maintenance and replacement in a flexible model without a large upfront investment." },
+      ],
+    },
+  },
   industries: {
     title: "One solution for many kinds of business.",
     cta: "Find the fit for your business",
@@ -130,11 +145,31 @@ export const en: Dictionary = {
   },
   security: {
     title: "Your business, always under control.",
-    items: {
+    operations: {
+      eyebrow: "Managed IT services",
+      title: "IT operations that keep your business moving.",
+      intro: "From core infrastructure to employee support, we organise everyday IT processes so your teams have secure, available technology ready for work.",
+      items: {
+        infrastructure: { title: "Server, network and infrastructure", summary: "We plan, configure and maintain the technical foundation behind your applications, data and business communications.", details: ["Server, storage, backup and cloud-service administration.", "Network, Wi-Fi, VPN, firewall and segmentation configuration for dependable, protected connectivity.", "Standard configurations, infrastructure documentation and capacity planning for business growth.", "Preventive maintenance, controlled updates and rapid recovery when disruption occurs."] },
+        access: { title: "Identity and access management", summary: "We make sure each person has only the access they need, with a clear audit trail.", details: ["Account creation, changes and closure for starters, role changes and leavers.", "Role and permission design based on responsibilities and least-privilege access.", "Multi-factor authentication and secure policies for passwords and devices.", "Regular access reviews and audit records to reduce unauthorised-access risk."] },
+        support: { title: "End-user and device support", summary: "We help employees work without friction and keep devices configured, protected and ready to use.", details: ["Support for laptops, desktops, email, applications, printers and mobile devices.", "Ready-to-work device setup for new employees from day one.", "Inventory, updates, encryption and endpoint protection throughout the device lifecycle.", "Clear user guidance and practical solutions that reduce time lost to technical issues."] },
+        operations: { title: "Monitoring, SLA and incident management", summary: "We watch critical services, respond to issues and manage restoration with clear priorities.", details: ["Proactive monitoring of availability, performance, capacity and security across key systems.", "Alerting and incident classification by business impact, with escalation to the right team.", "Clear SLAs for response times, priorities and communication during disruptions.", "Post-incident analysis, root-cause documentation and preventative actions."] },
+      },
+    },    items: {
       cloud: { title: "Cloud", text: "Business data available whenever you need it." },
       data: { title: "Data security", text: "Infrastructure built for security and reliability." },
       reports: { title: "Real-time reports", text: "See performance without waiting." },
       support: { title: "Local support", text: "Get help from Trebit’s local team." },
+      managed: {
+        title: "Managed IT and System Operations",
+        text: "Reliable infrastructure and responsive support for your day-to-day operations.",
+        bullets: [
+          "Server, Network dhe Infrastructure",
+          "Identity & Access management",
+          "End-user & device support",
+          "Monitoring, SLA dhe Incident management",
+        ],
+      },
     },
   },
   about: {

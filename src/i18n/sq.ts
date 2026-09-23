@@ -95,6 +95,21 @@ export const sq: Dictionary = {
       },
     },
   },
+  productPage: {
+    eyebrow: "Zgjidhje për biznesin",
+    title: "Teknologjia e duhur për mënyrën si punon biznesi yt.",
+    intro: "Trebit bashkon softuerin që organizon operacionet me harduerin e besueshëm që e bën punën e përditshme më të shpejtë dhe më të sigurt.",
+    software: { label: "Software", title: "Një platformë për punën e përditshme.", text: "Nga shitjet dhe fiskalizimi deri te stoku, raportet dhe operacionet e menaxhuara IT, çdo proces lidhet në një sistem të vetëm." },
+    hardware: {
+      label: "Harduer", title: "Pajisje të gatshme për çdo pikë pune.", text: "Përzgjedhim, konfigurojmë dhe mbështesim pajisjet që i duhen biznesit tënd, nga arka deri te rrjeti.",
+      items: [
+        { title: "POS, PC, PDA, tablet, printer dhe skaner", text: "Pajisje të përzgjedhura për shitje, administrim, lëvizje në terren dhe printim të shpejtë e të saktë." },
+        { title: "Network, WiFi, firewall dhe UPS", text: "Rrjet i qëndrueshëm dhe i mbrojtur, me lidhje të besueshme dhe energji rezervë për vazhdimësi në punë." },
+        { title: "Standardizim dhe Lifecycle Management", text: "Konfigurime të njëjta, inventar i qartë, përditësime dhe planifikim për çdo fazë të jetës së pajisjes." },
+        { title: "Hardware as a Service", text: "Pajisje, konfigurim, mirëmbajtje dhe zëvendësim në një model fleksibil, pa investim të madh fillestar." },
+      ],
+    },
+  },
   industries: {
     title: "Një zgjidhje për shumë lloje biznesesh.",
     cta: "Gjej zgjidhjen për biznesin tënd",
@@ -219,7 +234,17 @@ export const sq: Dictionary = {
   },
   security: {
     title: "Biznesi yt, gjithmonë nën kontroll.",
-    items: {
+    operations: {
+      eyebrow: "Shërbime të menaxhuara IT",
+      title: "Operacionet e IT-së që e mbajnë biznesin në lëvizje.",
+      intro: "Nga infrastruktura bazë deri te mbështetja e përdoruesve, i organizojmë proceset e përditshme të IT-së që ekipet tuaja të kenë teknologji të sigurt, të qasshme dhe të gatshme për punë.",
+      items: {
+        infrastructure: { title: "Server, rrjet dhe infrastrukturë", summary: "Planifikojmë, konfigurojmë dhe mirëmbajmë bazën teknike për aplikacionet, të dhënat dhe komunikimin e biznesit.", details: ["Administrim i serverëve, ruajtjes së të dhënave, kopjeve rezervë dhe shërbimeve cloud.", "Konfigurim i rrjetit, Wi-Fi, VPN, firewall dhe segmentimit për lidhje të qëndrueshme e të mbrojtura.", "Dokumentim i infrastrukturës, konfigurime të standardizuara dhe planifikim i kapacitetit për rritje.", "Mirëmbajtje parandaluese, përditësime të kontrolluara dhe rikuperim i shpejtë në rast ndërprerjeje."] },
+        access: { title: "Menaxhimi i identitetit dhe qasjes", summary: "Sigurojmë që secili person të ketë vetëm qasjen që i nevojitet, me gjurmë të qartë auditimi.", details: ["Krijim, ndryshim dhe mbyllje e llogarive për hyrje të reja, ndryshim roli dhe largim nga puna.", "Role dhe leje sipas detyrës, duke zbatuar parimin e qasjes minimale.", "Autentikim shumfaktorësh dhe politika të sigurta për fjalëkalimet e pajisjet.", "Rishikim periodik i qasjeve dhe regjistra auditimi për të reduktuar rrezikun."] },
+        support: { title: "Mbështetje për përdoruesit fundorë dhe pajisjet", summary: "I ndihmojmë punonjësit të punojnë pa pengesa dhe i mbajmë pajisjet të konfiguruara, të mbrojtura dhe gati.", details: ["Zgjidhje për laptopë, kompjuterë, email, aplikacione, printerë dhe pajisje mobile.", "Përgatitje e pajisjeve për punonjësit e rinj me llogari, programe dhe konfigurime standarde që në ditën e parë.", "Menaxhim i inventarit, përditësimeve, enkriptimit dhe mbrojtjes gjatë ciklit jetësor të pajisjes.", "Udhëzim i qartë për përdoruesit që ul kohën e humbur nga problemet teknike."] },
+        operations: { title: "Monitorim, SLA dhe menaxhim i incidenteve", summary: "Vëzhgojmë shërbimet kryesore, reagojmë ndaj problemeve dhe e rikthejmë punën me prioritete të qarta.", details: ["Monitorim proaktiv i disponueshmërisë, performancës, kapacitetit dhe sigurisë së sistemeve kryesore.", "Alarmim dhe klasifikim i incidenteve sipas ndikimit në biznes, me eskalim te ekipi i duhur.", "SLA të qarta për kohën e reagimit, prioritetet dhe komunikimin gjatë ndërprerjeve.", "Analizë pas incidentit, dokumentim i shkakut rrënjësor dhe masa parandaluese."] },
+      },
+    },    items: {
       cloud: {
         title: "Cloud",
         text: "Të dhënat e biznesit të qasshme kurdo.",
@@ -235,6 +260,16 @@ export const sq: Dictionary = {
       support: {
         title: "Support lokal",
         text: "Merr ndihmë nga ekipi lokal i Trebit.",
+      },
+      managed: {
+        title: "Menaxhim i IT-së dhe operacioneve të sistemit",
+        text: "Infrastrukturë e qëndrueshme dhe mbështetje e shpejtë për operacionet e përditshme.",
+        bullets: [
+          "Serverë, rrjet dhe infrastrukturë",
+          "Menaxhimi i identitetit dhe qasjes",
+          "Mbështetje për përdoruesit fundorë dhe pajisjet",
+          "Monitorim, SLA dhe menaxhim i incidenteve",
+        ],
       },
     },
   },

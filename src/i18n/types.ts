@@ -52,6 +52,13 @@ export type Dictionary = {
       { title: string; text: string }
     >
   }
+  productPage: {
+    eyebrow: string
+    title: string
+    intro: string
+    software: { label: string; title: string; text: string }
+    hardware: { label: string; title: string; text: string; items: { title: string; text: string }[] }
+  }
   industries: {
     title: string
     cta: string
@@ -83,11 +90,13 @@ export type Dictionary = {
   }
   security: {
     title: string
+    operations: { eyebrow: string; title: string; intro: string; items: { infrastructure: { title: string; summary: string; details: string[] }; access: { title: string; summary: string; details: string[] }; support: { title: string; summary: string; details: string[] }; operations: { title: string; summary: string; details: string[] } } }
     items: {
-      cloud: { title: string; text: string }
-      data: { title: string; text: string }
-      reports: { title: string; text: string }
-      support: { title: string; text: string }
+      cloud: { title: string; text: string; bullets?: string[] }
+      data: { title: string; text: string; bullets?: string[] }
+      reports: { title: string; text: string; bullets?: string[] }
+      support: { title: string; text: string; bullets?: string[] }
+      managed: { title: string; text: string; bullets: string[] }
     }
   }
   about: {

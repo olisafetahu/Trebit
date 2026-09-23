@@ -17,7 +17,7 @@ export function Footer({ onLegal }: FooterProps) {
           <p>{t.footer.blurb}</p>
         </div>
         <nav aria-label="Footer">
-          <a href="#produkti">{t.nav.product}</a>
+          <a href="/produkti">{t.nav.product}</a>
           <a href="#zgjidhjet">{t.nav.solutions}</a>
           <a href="#pakot">{t.nav.packages}</a>
           <a href="#biznese">{t.nav.businesses}</a>

@@ -11,9 +11,8 @@ import { Industries } from "./components/Industries"
 import { LegalPage } from "./components/LegalPage"
 import { LoginModal } from "./components/LoginModal"
 import { Pricing } from "./components/Pricing"
-import { Product } from "./components/Product"
-import { Security } from "./components/Security"
 import { TrustStrip } from "./components/TrustStrip"
+import { ProductPage } from "./components/ProductPage"
 import { scrollToId } from "./hooks/scrollToId"
 import { useI18n } from "./i18n"
 
@@ -23,6 +22,7 @@ export default function App() {
   const [menuOpen, setMenuOpen] = useState(false)
   const [loginOpen, setLoginOpen] = useState(false)
   const [legal, setLegal] = useState<"privacy" | "terms" | null>(null)
+  const [productPage, setProductPage] = useState(() => window.location.pathname.toLowerCase() === "/produkti")
 
   useEffect(() => {
     document.title = t.meta.title
@@ -38,6 +38,12 @@ export default function App() {
     onScroll()
     window.addEventListener("scroll", onScroll, { passive: true })
     return () => window.removeEventListener("scroll", onScroll)
+  }, [])
+
+  useEffect(() => {
+    const onPopState = () => setProductPage(window.location.pathname.toLowerCase() === "/produkti")
+    window.addEventListener("popstate", onPopState)
+    return () => window.removeEventListener("popstate", onPopState)
   }, [])
 
   useEffect(() => {
@@ -69,7 +75,7 @@ export default function App() {
       {menuOpen && (
         <div className="mobile-drawer">
           {[
-            ["#produkti", t.nav.product],
+            ["/produkti", t.nav.product],
             ["#zgjidhjet", t.nav.solutions],
             ["#pakot", t.nav.packages],
             ["#biznese", t.nav.businesses],
@@ -105,8 +111,8 @@ export default function App() {
             className="btn btn-primary"
             href="#kontakt"
             onClick={(event) => {
-              event.preventDefault()
-              setMenuOpen(false)
+                event.preventDefault()
+                setMenuOpen(false)
               window.setTimeout(() => {
                 scrollToId("#kontakt")
                 history.replaceState(null, "", "#kontakt")
@@ -117,19 +123,21 @@ export default function App() {
           </a>
         </div>
       )}
+      {productPage ? (
+        <ProductPage />
+      ) : (
       <main>
         <Hero />
         <TrustStrip />
-        <Product />
         <Industries />
         <Pricing />
         <HowItWorks />
         <DashboardShowcase />
-        <Security />
         <About />
         <FinalCta />
         <Contact />
       </main>
+      )}
       <Footer onLegal={setLegal} />
       <LoginModal open={loginOpen} onClose={() => setLoginOpen(false)} />
     </>
