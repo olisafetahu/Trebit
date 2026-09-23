@@ -25,13 +25,14 @@ export const sq: Dictionary = {
   },
   hero: {
     eyebrow: "Një platformë. Gjithçka për biznesin tënd.",
-    headlineA: "Menaxho biznesin tënd.",
-    headlineB: "Më lehtë. Më shpejt. Më zgjuar.",
-    supporting:
-      "Trebit është platforma moderne për menaxhimin e shitjeve, stokut, financave dhe proceseve të biznesit — të gjitha në një sistem.",
-    primary: "Kërko Demo",
+    headlineA: "Gjithçka që i duhet biznesit tuaj. Në një vend.",
+    headlineB: "",
+    supporting: "ERP, softuer dhe harduer të integruar për ta menaxhuar biznesin tuaj më thjesht, më shpejt dhe më mirë.",
+    primary: "Zbulo Trebit",
     secondary: "Shiko pakot",
+    learnMore: "Mëso më shumë",
     trust: "Zgjidhje e ndërtuar për nevojat e bizneseve në Kosovë.",
+    tabs: { erp: "ERP", software: "Software", hardware: "Hardware" },
     floats: {
       sales: "Shitje",
       stock: "Stok",
@@ -202,20 +203,12 @@ export const sq: Dictionary = {
     },
   },
   how: {
-    title: "Si funksionon Trebit",
+    title: "Si ju ndihmon Trebit?",
+    intro: "Trebit i sjell në një vend teknologjitë dhe mjetet që ju nevojiten për ta menaxhuar biznesin tuaj në mënyrë më të thjeshtë dhe efikase.",
     steps: [
-      {
-        title: "Zgjidh pakon",
-        text: "Gjej funksionalitetet që i përshtaten biznesit tënd.",
-      },
-      {
-        title: "Konfiguro Trebit",
-        text: "Përshtate sistemin sipas mënyrës së punës së biznesit.",
-      },
-      {
-        title: "Menaxho dhe rritu",
-        text: "Kontrollo shitjet, stokun, financat dhe raportet nga një vend.",
-      },
+      { title: "Menaxhim", text: "Mbani nën kontroll shitjet, stokun, financat dhe proceset e biznesit." },
+      { title: "Integrim", text: "Lidhni ERP-në, softuerët dhe harduerin tuaj në një ekosistem të vetëm." },
+      { title: "Kontroll", text: "Punoni më efikas, merrni vendime më të informuara dhe zhvilloni biznesin tuaj." },
     ],
   },
   dashboard: {
@@ -231,6 +224,15 @@ export const sq: Dictionary = {
     stockTitle: "Alarme stoku",
     txTitle: "Transaksionet e fundit",
     lowStock: "Sasi e ulët",
+    sectionTitle: "Menaxhoni biznesin tuaj nga një vend.",
+    sectionText: "Me Trebit ERP, keni një pamje të qartë të operacioneve të biznesit tuaj dhe kontroll mbi proceset kryesore, nga shitjet dhe inventari deri te financat.",
+    labels: { sales: "Shitjet", inventory: "Inventari", finance: "Financat" },
+    slides: {
+      software: { title: "Software që e organizon biznesin", text: "Një platformë e qartë për shitje, fiskalizim, stok, financa dhe raporte në kohë reale.", points: ["Shitje dhe fiskalizim", "Stok, blerje dhe logjistikë", "Financa dhe raporte", "Kanale digjitale të lidhura"] },
+      hardware: { title: "Hardware i gatshëm për punë", text: "Pajisje të përzgjedhura dhe të konfiguruara për çdo pikë ku punon biznesi yt.", points: ["POS, PC, PDA dhe tablet", "Printerë dhe skanerë", "Network, WiFi, firewall dhe UPS", "Hardware as a Service"] },
+      support: { title: "Support që përgjigjet kur duhet", text: "Ekipi ynë të ndihmon të vazhdosh punën pa ndërprerje, me zgjidhje të shpejta dhe të qarta.", points: ["Ndihmë për përdoruesit", "Konfigurim i pajisjeve", "Zgjidhje e problemeve teknike", "Udhëzim dhe mbështetje lokale"] },
+      itServices: { title: "Shërbime të menaxhuara IT", text: "Ne kujdesemi për teknologjinë e përditshme, që ekipi yt të fokusohet te puna dhe rritja.", points: ["Server, rrjet dhe infrastrukturë", "Menaxhim i identitetit dhe qasjes", "Monitorim dhe SLA", "Menaxhim i incidenteve"] },
+    },
   },
   security: {
     title: "Biznesi yt, gjithmonë nën kontroll.",

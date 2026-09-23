@@ -18,11 +18,9 @@ export function Footer({ onLegal }: FooterProps) {
         </div>
         <nav aria-label="Footer">
           <a href="/produkti">{t.nav.product}</a>
-          <a href="#zgjidhjet">{t.nav.solutions}</a>
-          <a href="#pakot">{t.nav.packages}</a>
-          <a href="#biznese">{t.nav.businesses}</a>
-          <a href="#rreth-nesh">{t.nav.about}</a>
-          <a href="#kontakt">{t.nav.contact}</a>
+          <a href="/pakot#pakot">{t.nav.packages}</a>
+          <a href="/#rreth-nesh">{t.nav.about}</a>
+          <a href="/#kontakt">{t.nav.contact}</a>
           <button type="button" onClick={() => onLegal("privacy")}>
             {t.footer.privacy}
           </button>

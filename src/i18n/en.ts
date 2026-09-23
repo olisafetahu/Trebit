@@ -31,7 +31,9 @@ export const en: Dictionary = {
       "Trebit is the modern platform for sales, stock, finance and day-to-day operations — all in one system.",
     primary: "Request a demo",
     secondary: "See packages",
+    learnMore: "Learn more",
     trust: "Built for the needs of businesses in Kosovo.",
+    tabs: { erp: "ERP", software: "Software", hardware: "Hardware" },
     floats: {
       sales: "Sales",
       stock: "Stock",
@@ -123,6 +125,7 @@ export const en: Dictionary = {
   },
   how: {
     title: "How Trebit works",
+    intro: "Trebit brings together the technology and tools you need to manage your business more simply and efficiently.",
     steps: [
       { title: "Choose a package", text: "Find the capabilities that match your business." },
       { title: "Configure Trebit", text: "Adapt the system to how the business actually works." },
@@ -142,6 +145,15 @@ export const en: Dictionary = {
     stockTitle: "Stock alerts",
     txTitle: "Recent transactions",
     lowStock: "Low quantity",
+    sectionTitle: "Manage your business from one place.",
+    sectionText: "With Trebit ERP, you get a clear view of your business operations and control over key processes, from sales and inventory to finance.",
+    labels: { sales: "Sales", inventory: "Inventory", finance: "Finance" },
+    slides: {
+      software: { title: "Software that organises your business", text: "One clear platform for sales, fiscalisation, stock, finance and real-time reporting.", points: ["Sales and fiscalisation", "Stock, purchasing and logistics", "Finance and reporting", "Connected digital channels"] },
+      hardware: { title: "Hardware ready for work", text: "Selected and configured equipment for every point where your business operates.", points: ["POS, PC, PDA and tablet", "Printers and scanners", "Network, WiFi, firewall and UPS", "Hardware as a Service"] },
+      support: { title: "Support when you need it", text: "Our team helps you continue working without disruption, with clear and rapid solutions.", points: ["User support", "Device configuration", "Technical issue resolution", "Local guidance and support"] },
+      itServices: { title: "Managed IT services", text: "We care for the everyday technology so your team can focus on work and growth.", points: ["Server, network and infrastructure", "Identity and access management", "Monitoring and SLA", "Incident management"] },
+    },
   },
   security: {
     title: "Your business, always under control.",

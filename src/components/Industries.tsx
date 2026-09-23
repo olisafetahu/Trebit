@@ -47,7 +47,7 @@ export function Industries() {
         ))}
       </div>
       <div className="section-cta">
-        <a className="btn btn-primary" href="#kontakt">
+        <a className="btn btn-primary" href="/#kontakt">
           {t.industries.cta}
         </a>
       </div>

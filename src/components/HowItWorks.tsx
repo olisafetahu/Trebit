@@ -6,9 +6,10 @@ export function HowItWorks() {
   const { ref, visible } = useReveal<HTMLElement>()
 
   return (
-    <section className={`section section--narrow ${visible ? "is-in" : ""}`} ref={ref}>
+    <section id="ndihma" className={`section section--narrow ${visible ? "is-in" : ""}`} ref={ref}>
       <div className="section-head">
         <h2>{t.how.title}</h2>
+        <p>{t.how.intro}</p>
       </div>
       <ol className="steps">
         {t.how.steps.map((step, index) => (

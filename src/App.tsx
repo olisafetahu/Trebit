@@ -1,18 +1,17 @@
 import { useEffect, useState } from "react"
 import { About } from "./components/About"
 import { Contact } from "./components/Contact"
-import { DashboardShowcase } from "./components/DashboardShowcase"
 import { FinalCta } from "./components/FinalCta"
 import { Footer } from "./components/Footer"
 import { Header } from "./components/Header"
 import { Hero } from "./components/Hero"
 import { HowItWorks } from "./components/HowItWorks"
-import { Industries } from "./components/Industries"
+import { ErpDashboardSection } from "./components/ErpDashboardSection"
 import { LegalPage } from "./components/LegalPage"
 import { LoginModal } from "./components/LoginModal"
-import { Pricing } from "./components/Pricing"
 import { TrustStrip } from "./components/TrustStrip"
 import { ProductPage } from "./components/ProductPage"
+import { PackagesPage } from "./components/PackagesPage"
 import { scrollToId } from "./hooks/scrollToId"
 import { useI18n } from "./i18n"
 
@@ -23,6 +22,7 @@ export default function App() {
   const [loginOpen, setLoginOpen] = useState(false)
   const [legal, setLegal] = useState<"privacy" | "terms" | null>(null)
   const [productPage, setProductPage] = useState(() => window.location.pathname.toLowerCase() === "/produkti")
+  const [packagesPage, setPackagesPage] = useState(() => window.location.pathname.toLowerCase() === "/pakot")
 
   useEffect(() => {
     document.title = t.meta.title
@@ -41,10 +41,21 @@ export default function App() {
   }, [])
 
   useEffect(() => {
-    const onPopState = () => setProductPage(window.location.pathname.toLowerCase() === "/produkti")
+    const onPopState = () => {
+      setProductPage(window.location.pathname.toLowerCase() === "/produkti")
+      setPackagesPage(window.location.pathname.toLowerCase() === "/pakot")
+    }
     window.addEventListener("popstate", onPopState)
     return () => window.removeEventListener("popstate", onPopState)
   }, [])
+
+  useEffect(() => {
+    if (window.location.pathname !== "/" || !window.location.hash) return
+
+    const target = window.location.hash
+    const timeout = window.setTimeout(() => scrollToId(target), 100)
+    return () => window.clearTimeout(timeout)
+  }, [productPage, packagesPage])
 
   useEffect(() => {
     document.body.style.overflow = loginOpen ? "hidden" : ""
@@ -76,16 +87,15 @@ export default function App() {
         <div className="mobile-drawer">
           {[
             ["/produkti", t.nav.product],
-            ["#zgjidhjet", t.nav.solutions],
-            ["#pakot", t.nav.packages],
-            ["#biznese", t.nav.businesses],
-            ["#rreth-nesh", t.nav.about],
-            ["#kontakt", t.nav.contact],
+            ["/pakot#pakot", t.nav.packages],
+            ["/#rreth-nesh", t.nav.about],
+            ["/#kontakt", t.nav.contact],
           ].map(([href, label]) => (
             <a
               key={href}
               href={href}
               onClick={(event) => {
+                if (!href.startsWith("#")) return
                 event.preventDefault()
                 setMenuOpen(false)
                 window.setTimeout(() => {
@@ -109,8 +119,12 @@ export default function App() {
           </button>
           <a
             className="btn btn-primary"
-            href="#kontakt"
+            href={productPage || packagesPage ? "/#kontakt" : "#kontakt"}
             onClick={(event) => {
+              if (productPage || packagesPage) {
+                setMenuOpen(false)
+                return
+              }
                 event.preventDefault()
                 setMenuOpen(false)
               window.setTimeout(() => {
@@ -125,14 +139,14 @@ export default function App() {
       )}
       {productPage ? (
         <ProductPage />
+      ) : packagesPage ? (
+        <PackagesPage />
       ) : (
       <main>
         <Hero />
-        <TrustStrip />
-        <Industries />
-        <Pricing />
         <HowItWorks />
-        <DashboardShowcase />
+        <ErpDashboardSection />
+        <TrustStrip />
         <About />
         <FinalCta />
         <Contact />

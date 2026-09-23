@@ -27,7 +27,7 @@ export function Pricing() {
                   <li key={feature}>{feature}</li>
                 ))}
               </ul>
-              <a className={pkg.featured ? "btn btn-primary" : "btn btn-outline"} href="#kontakt">
+              <a className={pkg.featured ? "btn btn-primary" : "btn btn-outline"} href="/#kontakt">
                 {copy.cta}
               </a>
             </article>

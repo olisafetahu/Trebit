@@ -30,7 +30,9 @@ export type Dictionary = {
     supporting: string
     primary: string
     secondary: string
+    learnMore: string
     trust: string
+    tabs: { erp: string; software: string; hardware: string }
     floats: {
       sales: string
       stock: string
@@ -77,6 +79,7 @@ export type Dictionary = {
   }
   how: {
     title: string
+    intro: string
     steps: { title: string; text: string }[]
   }
   dashboard: {
@@ -87,6 +90,10 @@ export type Dictionary = {
     stockTitle: string
     txTitle: string
     lowStock: string
+    sectionTitle: string
+    sectionText: string
+    labels: { sales: string; inventory: string; finance: string }
+    slides: { software: { title: string; text: string; points: string[] }; hardware: { title: string; text: string; points: string[] }; support: { title: string; text: string; points: string[] }; itServices: { title: string; text: string; points: string[] } }
   }
   security: {
     title: string

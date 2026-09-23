@@ -1,3 +1,4 @@
+import { useEffect } from "react"
 import { ArrowDown, Boxes, CreditCard, Laptop, Network, Printer, ShieldCheck, TabletSmartphone, Wifi } from "lucide-react"
 import { Product } from "./Product"
 import { Security } from "./Security"
@@ -7,6 +8,11 @@ const hardwareIcons = [CreditCard, Laptop, Network, ShieldCheck]
 
 export function ProductPage() {
   const { t } = useI18n()
+
+  useEffect(() => {
+    const target = window.location.hash && document.querySelector(window.location.hash)
+    if (target) window.setTimeout(() => target.scrollIntoView({ behavior: "smooth", block: "start" }), 80)
+  }, [])
 
   return (
     <main className="product-page">

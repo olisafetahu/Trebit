@@ -23,7 +23,7 @@ export function Security() {
           return <article key={item.title} className="secure-card"><Icon size={32} strokeWidth={1.8} /><h3>{item.title}</h3><p>{item.text}</p></article>
         })}
       </div>
-      <div className="operations" aria-labelledby="operations-title">
+      <div id="sherbime-it" className="operations" aria-labelledby="operations-title">
         <div className="operations-intro">
           <span className="eyebrow">{t.security.operations.eyebrow}</span>
           <h2 id="operations-title">{t.security.operations.title}</h2>

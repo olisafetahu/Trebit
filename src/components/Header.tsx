@@ -4,11 +4,9 @@ import { useI18n } from "../i18n"
 
 const links = [
   { href: "/produkti", key: "product" as const },
-  { href: "#zgjidhjet", key: "solutions" as const },
-  { href: "#pakot", key: "packages" as const },
-  { href: "#biznese", key: "businesses" as const },
-  { href: "#rreth-nesh", key: "about" as const },
-  { href: "#kontakt", key: "contact" as const },
+  { href: "/pakot#pakot", key: "packages" as const },
+  { href: "/#rreth-nesh", key: "about" as const },
+  { href: "/#kontakt", key: "contact" as const },
 ]
 
 type HeaderProps = {
@@ -20,6 +18,8 @@ type HeaderProps = {
 
 export function Header({ scrolled, open, onToggle, onLogin }: HeaderProps) {
   const { t, locale, setLocale } = useI18n()
+  const onProductPage = window.location.pathname.toLowerCase() === "/produkti"
+  const onInnerPage = onProductPage || window.location.pathname.toLowerCase() === "/pakot"
 
   return (
     <header className={`nav ${scrolled ? "nav--scrolled" : ""} ${open ? "nav--open" : ""}`}>
@@ -27,21 +27,23 @@ export function Header({ scrolled, open, onToggle, onLogin }: HeaderProps) {
         <Logo />
 
         <nav className="nav-links" aria-label="Kryesore">
-          {links.map((link) => (
+          {links.map((link) => {
+            const href = link.href
+            return (
             <a
               key={link.href}
-              href={link.href}
+              href={href}
               onClick={(event) => {
-                if (!link.href.startsWith("#")) return
+                if (!href.startsWith("#")) return
                 event.preventDefault()
                 if (open) onToggle()
-                scrollToId(link.href)
-                history.replaceState(null, "", link.href)
+                scrollToId(href)
+                history.replaceState(null, "", href)
               }}
             >
               {t.nav[link.key]}
             </a>
-          ))}
+          )})}
         </nav>
 
         <div className="nav-actions">
@@ -64,7 +66,7 @@ export function Header({ scrolled, open, onToggle, onLogin }: HeaderProps) {
           <button type="button" className="btn btn-ghost" onClick={onLogin}>
             {t.nav.login}
           </button>
-          <a className="btn btn-primary" href="#kontakt">
+          <a className="btn btn-primary" href={onInnerPage ? "/#kontakt" : "#kontakt"}>
             {t.nav.demo}
           </a>
           <button
