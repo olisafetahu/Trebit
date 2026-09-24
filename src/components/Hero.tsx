@@ -35,9 +35,9 @@ export function Hero() {
           <div className="hero-ctas"><a className="btn btn-primary btn-lg" href="#ndihma">{t.hero.primary}</a></div>
         </div>
         <div className="hero-stage" aria-hidden="false">
-          <div className="device-laptop"><div className="device-laptop-bar"><span /><span /><span /><em>Trebit · Paneli</em></div><img src="/trebit-dashboard.png" alt="Paneli i Trebit me shitje, stok dhe raporte" /></div>
-          <div className="device-pos"><img src="/trebit-pos.png" alt="Ndërfaqja POS e Trebit" /></div>
-          <div className="device-phone"><img src="/trebit-mobile.png" alt="Aplikacioni mobil Trebit" /></div>
+          <img className="device-dashboard" src="/ERPDashboard.png" alt="Paneli i Trebit me shitje, stok dhe raporte" />
+          <div className="device-pos"><img src="/POS.png" alt="Ndërfaqja POS e Trebit" /></div>
+          <div className="device-phone"><img src="/mobile.png" alt="Aplikacioni mobil Trebit" /></div>
           <div className="float-card float-card--sales">{t.hero.floats.sales}</div><div className="float-card float-card--stock">{t.hero.floats.stock}</div><div className="float-card float-card--finance">{t.hero.floats.finance}</div><div className="float-card float-card--reports">{t.hero.floats.reports}</div><div className="float-card float-card--fiscal">{t.hero.floats.fiscal}</div>
         </div>
       </> : (() => {
