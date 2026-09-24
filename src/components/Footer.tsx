@@ -8,6 +8,7 @@ type FooterProps = {
 
 export function Footer({ onLegal }: FooterProps) {
   const { t } = useI18n()
+  const partners = ["Balfin", "Toshiba", "Pricer", "Diebold Nixdorf", "Swinto", "ISA4D", "NLB Bank", "MIKA", "NOVA", "Tretech", "TIME", "FEGO"]
 
   return (
     <footer className="footer">
@@ -17,10 +18,12 @@ export function Footer({ onLegal }: FooterProps) {
           <p>{t.footer.blurb}</p>
         </div>
         <nav aria-label="Footer">
-          <a href="/produkti">{t.nav.product}</a>
-          <a href="/pakot#pakot">{t.nav.packages}</a>
-          <a href="/#rreth-nesh">{t.nav.about}</a>
-          <a href="/#kontakt">{t.nav.contact}</a>
+          {t.nav.groups.map((group) => (
+            <div className="footer-group" key={group.label}>
+              <strong>{group.label}</strong>
+              {group.items.slice(0, 4).map((item) => <a href={item.href} key={item.label}>{item.label}</a>)}
+            </div>
+          ))}
           <button type="button" onClick={() => onLegal("privacy")}>
             {t.footer.privacy}
           </button>
@@ -52,6 +55,10 @@ export function Footer({ onLegal }: FooterProps) {
             </div>
           )}
         </div>
+      </div>
+      <div className="partners" id="partneret">
+        <h3>Our Partners</h3>
+        <div>{partners.map((partner) => <span key={partner}>{partner}</span>)}</div>
       </div>
       <div className="footer-bottom">
         <p>{t.footer.kubit}</p>

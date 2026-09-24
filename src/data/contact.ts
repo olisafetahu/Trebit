@@ -1,7 +1,7 @@
 export const contact = {
   website: "www.kubit-ks.com",
   websiteUrl: "https://www.kubit-ks.com",
-  email: "",
+  email: "info@kubit-ks.com",
   phone: "",
   social: {
     facebook: "",

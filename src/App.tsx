@@ -12,6 +12,7 @@ import { LoginModal } from "./components/LoginModal"
 import { TrustStrip } from "./components/TrustStrip"
 import { ProductPage } from "./components/ProductPage"
 import { PackagesPage } from "./components/PackagesPage"
+import { ServicePage } from "./components/ServicePage"
 import { scrollToId } from "./hooks/scrollToId"
 import { useI18n } from "./i18n"
 
@@ -23,6 +24,10 @@ export default function App() {
   const [legal, setLegal] = useState<"privacy" | "terms" | null>(null)
   const [productPage, setProductPage] = useState(() => window.location.pathname.toLowerCase() === "/produkti")
   const [packagesPage, setPackagesPage] = useState(() => window.location.pathname.toLowerCase() === "/pakot")
+  const [servicePage, setServicePage] = useState<"it" | "support" | "about" | null>(() => {
+    const path = window.location.pathname.toLowerCase()
+    return path === "/sherbime-it" ? "it" : path === "/support" ? "support" : path === "/rreth-nesh" ? "about" : null
+  })
 
   useEffect(() => {
     document.title = t.meta.title
@@ -44,6 +49,8 @@ export default function App() {
     const onPopState = () => {
       setProductPage(window.location.pathname.toLowerCase() === "/produkti")
       setPackagesPage(window.location.pathname.toLowerCase() === "/pakot")
+      const path = window.location.pathname.toLowerCase()
+      setServicePage(path === "/sherbime-it" ? "it" : path === "/support" ? "support" : path === "/rreth-nesh" ? "about" : null)
     }
     window.addEventListener("popstate", onPopState)
     return () => window.removeEventListener("popstate", onPopState)
@@ -55,7 +62,7 @@ export default function App() {
     const target = window.location.hash
     const timeout = window.setTimeout(() => scrollToId(target), 100)
     return () => window.clearTimeout(timeout)
-  }, [productPage, packagesPage])
+  }, [productPage, packagesPage, servicePage])
 
   useEffect(() => {
     document.body.style.overflow = loginOpen ? "hidden" : ""
@@ -68,7 +75,6 @@ export default function App() {
           scrolled
           open={false}
           onToggle={() => undefined}
-          onLogin={() => setLoginOpen(true)}
         />
         <LegalPage kind={legal} onBack={() => setLegal(null)} />
       </>
@@ -81,42 +87,17 @@ export default function App() {
         scrolled={scrolled}
         open={menuOpen}
         onToggle={() => setMenuOpen((v) => !v)}
-        onLogin={() => setLoginOpen(true)}
       />
       {menuOpen && (
         <div className="mobile-drawer">
-          {[
-            ["/produkti", t.nav.product],
-            ["/pakot#pakot", t.nav.packages],
-            ["/#rreth-nesh", t.nav.about],
-            ["/#kontakt", t.nav.contact],
-          ].map(([href, label]) => (
-            <a
-              key={href}
-              href={href}
-              onClick={(event) => {
-                if (!href.startsWith("#")) return
-                event.preventDefault()
-                setMenuOpen(false)
-                window.setTimeout(() => {
-                  scrollToId(href)
-                  history.replaceState(null, "", href)
-                }, 40)
-              }}
-            >
-              {label}
-            </a>
+          {t.nav.groups.map((group) => (
+            <div className="mobile-nav-group" key={group.label}>
+              <strong>{group.label}</strong>
+              {group.items.map((item) => (
+                <a href={item.href} key={item.label} onClick={() => setMenuOpen(false)}>{item.label}</a>
+              ))}
+            </div>
           ))}
-          <button
-            type="button"
-            className="btn btn-ghost"
-            onClick={() => {
-              setMenuOpen(false)
-              setLoginOpen(true)
-            }}
-          >
-            {t.nav.login}
-          </button>
           <a
             className="btn btn-primary"
             href={productPage || packagesPage ? "/#kontakt" : "#kontakt"}
@@ -141,6 +122,8 @@ export default function App() {
         <ProductPage />
       ) : packagesPage ? (
         <PackagesPage />
+      ) : servicePage ? (
+        <ServicePage kind={servicePage} />
       ) : (
       <main>
         <Hero />

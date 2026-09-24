@@ -17,6 +17,7 @@ export type Dictionary = {
     contact: string
     login: string
     demo: string
+    groups: { label: string; items: { label: string; href: string; description?: string }[] }[]
   }
   loginModal: {
     title: string
@@ -61,6 +62,11 @@ export type Dictionary = {
     software: { label: string; title: string; text: string }
     hardware: { label: string; title: string; text: string; items: { title: string; text: string }[] }
   }
+  servicePages: {
+    it: { eyebrow: string; title: string; intro: string; items: { title: string; text: string }[] }
+    support: { eyebrow: string; title: string; intro: string; items: { title: string; text: string }[] }
+    about: { eyebrow: string; title: string; intro: string; partnersTitle: string; partners: string[] }
+  }
   industries: {
     title: string
     cta: string
@@ -76,6 +82,16 @@ export type Dictionary = {
     requestQuote: string
     popular: string
     items: Record<PackageId, { name: string; description: string; features: string[]; cta: string }>
+  }
+  packagesPage: {
+    eyebrow: string
+    title: string
+    intro: string
+    erp: { title: string; text: string; label: string }
+    pos: { title: string; text: string; label: string }
+    bar: { title: string; text: string; label: string }
+    pricingTitle: string
+    implementation: { title: string; text: string; steps: { title: string; text: string }[] }
   }
   how: {
     title: string

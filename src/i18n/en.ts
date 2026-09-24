@@ -11,12 +11,29 @@ export const en: Dictionary = {
   nav: {
     product: "Products",
     solutions: "Solutions",
-    packages: "Packages",
+    packages: "KuBIT",
     businesses: "For businesses",
     about: "About",
     contact: "Contact",
     login: "Log in",
     demo: "Request a demo",
+    groups: [
+      { label: "KUBIT", items: [
+        { label: "KuBIT ERP / Lite", href: "/pakot#kubit-erp", description: "Sales, stock, warehouses and finance in one system." }, { label: "KuBIT POS", href: "/pakot#kubit-pos", description: "A fast till for shops and supermarkets." }, { label: "KuBIT Bar", href: "/pakot#kubit-bar", description: "Table orders, kitchen flow and billing." }, { label: "Fiscalization", href: "/pakot#fiskalizimi", description: "Invoices that follow regulations, automatically." }, { label: "Packages", href: "/pakot#pakot", description: "Choose a plan for your business size." }, { label: "Implementation", href: "/pakot#implementimi", description: "Setup, training and data migration." },
+      ] },
+      { label: "DEVICES", items: [
+        { label: "POS Systems", href: "/produkti" }, { label: "Thermal Printers", href: "/produkti" }, { label: "Barcode Scanner", href: "/produkti" }, { label: "PDA / Mobile Computers", href: "/produkti" }, { label: "Label Printers", href: "/produkti" }, { label: "Tablets", href: "/produkti" },
+      ] },
+      { label: "IT SERVICES", items: [
+        { label: "Managed IT", href: "/sherbime-it" }, { label: "Infrastructure", href: "/sherbime-it" }, { label: "Security & Backup", href: "/sherbime-it" }, { label: "Cloud", href: "/sherbime-it" }, { label: "Integration", href: "/sherbime-it" }, { label: "Analytics & Automation", href: "/sherbime-it" },
+      ] },
+      { label: "SUPPORT", items: [
+        { label: "Open Ticket", href: "/support" }, { label: "WhatsApp Support", href: "/support" }, { label: "Remote Support", href: "/support" }, { label: "Knowledge Base", href: "/support" }, { label: "Downloads", href: "/support" },
+      ] },
+      { label: "ABOUT US", items: [
+        { label: "Trebit Solutions", href: "/rreth-nesh" }, { label: "KuBIT Partnership", href: "/rreth-nesh" }, { label: "Partners", href: "/rreth-nesh" }, { label: "Contact", href: "/rreth-nesh" },
+      ] },
+    ],
   },
   loginModal: {
     title: "Log in to Trebit",
@@ -76,6 +93,40 @@ export const en: Dictionary = {
       ],
     },
   },
+  servicePages: {
+    it: {
+      eyebrow: "IT Services",
+      title: "Technology that keeps your business moving.",
+      intro: "From infrastructure and cloud to security, integrations and automation, KuBIT keeps your technology stable and ready to grow.",
+      items: [
+        { title: "Managed IT", text: "Ongoing monitoring, maintenance and support for your systems and users." },
+        { title: "Infrastructure", text: "Servers, networks, Wi-Fi, firewalls and equipment configured for secure work." },
+        { title: "Security & Backup", text: "Data protection, backups and recovery processes for business continuity." },
+        { title: "Cloud", text: "Cloud services tailored for access, collaboration and scale." },
+        { title: "Integration", text: "Connect your systems so data and processes flow without friction." },
+        { title: "Analytics & Automation", text: "Reporting and automation that help you work faster and decide better." },
+      ],
+    },
+    support: {
+      eyebrow: "Support",
+      title: "Help when you need it.",
+      intro: "One place for requests, technical assistance and resources that help your team keep working.",
+      items: [
+        { title: "Open Ticket", text: "Send your request and our team will follow it through to resolution." },
+        { title: "WhatsApp Support", text: "Fast communication for questions and cases that need a direct response." },
+        { title: "Remote Support", text: "Remote assistance for configuration and technical issues." },
+        { title: "Knowledge Base", text: "Practical guides and answers for everyday use." },
+        { title: "Downloads", text: "Materials and documents needed for your systems." },
+      ],
+    },
+    about: {
+      eyebrow: "About us",
+      title: "Trebit Solutions and KuBIT Partnership.",
+      intro: "Trebit Solutions delivers integrated business solutions, while the KuBIT partnership connects software, hardware and IT services in one ecosystem.",
+      partnersTitle: "Our partners",
+      partners: ["Balfin", "Toshiba", "Pricer", "Diebold Nixdorf", "Swinto", "ISA4D", "NLB Bank", "MIKA", "NOVA", "Tretech", "TIME", "FEGO"],
+    },
+  },
   industries: {
     title: "One solution for many kinds of business.",
     cta: "Find the fit for your business",
@@ -121,6 +172,24 @@ export const en: Dictionary = {
         features: ["All capabilities", "Custom integrations", "Advanced roles and permissions", "Dedicated reports", "Priority support"],
         cta: "Talk to the team",
       },
+    },
+  },
+  packagesPage: {
+    eyebrow: "KuBIT",
+    title: "KuBIT",
+    intro: "A complete technology ecosystem for your business: from operations and sales management to service, packages and tailored implementation.",
+    erp: { title: "KuBIT ERP Dashboard", text: "KuBIT ERP gives you a clear view of the entire business. Manage sales, items, stock, warehouses, suppliers, finance and reporting from one system. Real-time connected data helps you understand what is happening and make more confident decisions.", label: "Business management" },
+    pos: { title: "KuBIT POS", text: "KuBIT POS simplifies work at the till and connects directly to ERP. Record sales, accept payments, manage items and track the performance of every sales point. A faster experience for staff and greater accuracy for the business.", label: "Sales and payments" },
+    bar: { title: "KuBIT Bar", text: "KuBIT Bar is designed for cafes, bars and restaurants that want simpler service management. From table orders and item management to the kitchen, till and payment, every step connects in one workflow.", label: "For cafes, bars and restaurants" },
+    pricingTitle: "Packages",
+    implementation: {
+      title: "Implementation",
+      text: "KuBIT implementation is adapted to the way your business works. We analyse your processes, configure the system, connect the equipment and prepare your team for confident daily use.",
+      steps: [
+        { title: "Needs analysis", text: "We define the processes and capabilities your business needs." },
+        { title: "Configuration", text: "We adapt KuBIT to your workflows, users and equipment." },
+        { title: "Training and launch", text: "We train your team and help you start with confidence." },
+      ],
     },
   },
   how: {
