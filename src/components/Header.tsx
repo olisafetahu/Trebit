@@ -1,5 +1,6 @@
 import { Logo } from "./Logo"
-import { useState } from "react"
+import { useEffect, useRef, useState } from "react"
+import type { MouseEvent as ReactMouseEvent } from "react"
 import { useI18n } from "../i18n"
 import { BarChart3, Boxes, Coffee, FileText, Monitor, Package, Wrench } from "lucide-react"
 
@@ -20,10 +21,34 @@ type HeaderProps = {
 export function Header({ scrolled, open, onToggle }: HeaderProps) {
   const { t, locale, setLocale } = useI18n()
   const [lockedMenu, setLockedMenu] = useState<string | null>(null)
+  const headerRef = useRef<HTMLElement>(null)
   const onInnerPage = ["/produkti", "/pakot", "/sherbime-it", "/support", "/rreth-nesh"].includes(window.location.pathname.toLowerCase())
 
+  useEffect(() => {
+    const closeOnOutsideClick = (event: MouseEvent) => {
+      if (!headerRef.current?.contains(event.target as Node)) setLockedMenu(null)
+    }
+    const closeOnEscape = (event: KeyboardEvent) => {
+      if (event.key === "Escape") setLockedMenu(null)
+    }
+
+    document.addEventListener("mousedown", closeOnOutsideClick)
+    document.addEventListener("keydown", closeOnEscape)
+    return () => {
+      document.removeEventListener("mousedown", closeOnOutsideClick)
+      document.removeEventListener("keydown", closeOnEscape)
+    }
+  }, [])
+
+  const handleMenuTriggerClick = (event: ReactMouseEvent<HTMLButtonElement>, label: string) => {
+    event.stopPropagation()
+    const shouldClose = lockedMenu === label
+    setLockedMenu(shouldClose ? null : label)
+    if (shouldClose) event.currentTarget.blur()
+  }
+
   return (
-    <header className={`nav ${scrolled ? "nav--scrolled" : ""} ${open ? "nav--open" : ""}`}>
+    <header ref={headerRef} className={`nav ${scrolled ? "nav--scrolled" : ""} ${open ? "nav--open" : ""}`}>
       <div className="nav-inner">
         <Logo />
 
@@ -39,7 +64,7 @@ export function Header({ scrolled, open, onToggle }: HeaderProps) {
                 className="nav-menu-trigger"
                 aria-haspopup="true"
                 aria-expanded={lockedMenu === group.label}
-                onClick={() => setLockedMenu((current) => current === group.label ? null : group.label)}
+                onClick={(event) => handleMenuTriggerClick(event, group.label)}
               >
                 {group.label}
               </button>

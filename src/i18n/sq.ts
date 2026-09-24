@@ -156,12 +156,12 @@ export const sq: Dictionary = {
       title: "Teknologjia që e mban biznesin në lëvizje.",
       intro: "Nga infrastruktura dhe cloud-i te siguria, integrimet dhe automatizimi, KuBIT ju ndihmon ta mbani teknologjinë të qëndrueshme dhe të gatshme për rritje.",
       items: [
-        { title: "Managed IT", text: "Monitorim, mirëmbajtje dhe mbështetje e vazhdueshme për sistemet dhe përdoruesit tuaj." },
-        { title: "Infrastructure", text: "Serverë, rrjet, Wi-Fi, firewall dhe pajisje të konfiguruara për punë të sigurt." },
-        { title: "Security & Backup", text: "Mbrojtje e të dhënave, kopje rezervë dhe procese rikuperimi për vazhdimësi." },
-        { title: "Cloud", text: "Shërbime cloud të përshtatura për qasje, bashkëpunim dhe shkallëzim." },
-        { title: "Integration", text: "Lidhje mes sistemeve tuaja që të dhënat dhe proceset të rrjedhin pa pengesa." },
-        { title: "Analytics & Automation", text: "Raporte dhe automatizime që ju ndihmojnë të punoni më shpejt dhe të vendosni më mirë." },
+        { title: "Managed IT", text: "Monitorojmë, mirëmbajmë dhe mbështesim sistemet tuaja çdo ditë, që ekipi të ketë teknologji të qëndrueshme dhe të gatshme për punë. Nga kërkesat e përdoruesve deri te problemet kritike, reagojmë me procese dhe prioritete të qarta." },
+        { title: "Infrastructure", text: "Planifikojmë dhe administrojmë serverët, rrjetin, Wi-Fi-n, firewall-in dhe pajisjet kryesore të biznesit. Infrastruktura dokumentohet, standardizohet dhe përgatitet për rritje, siguri dhe vazhdimësi më të mirë." },
+        { title: "Security & Backup", text: "Mbrojmë të dhënat dhe sistemet me politika sigurie, kopje rezervë të kontrolluara dhe plane rikuperimi. Kjo ndihmon që biznesi të vazhdojë punën edhe kur ndodh një gabim, humbje e të dhënave ose ndërprerje." },
+        { title: "Cloud", text: "Konfigurojmë shërbime cloud që u japin ekipeve qasje të sigurt, bashkëpunim më të lehtë dhe fleksibilitet për t'u rritur. Zgjidhjet përshtaten me aplikacionet, përdoruesit dhe kërkesat reale të biznesit." },
+        { title: "Integration", text: "Lidhim ERP-në, POS-in, pajisjet dhe sistemet e tjera që të dhënat të lëvizin pa futje të dyfishtë dhe pa procese të shkëputura. Integrimet e bëjnë punën më të shpejtë, më të saktë dhe më të kontrollueshme." },
+        { title: "Analytics & Automation", text: "Kthejmë të dhënat e operacioneve në raporte të kuptueshme dhe automatizojmë detyrat që përsëriten. Kështu kurseni kohë, dalloni më shpejt problemet dhe merrni vendime të bazuara në të dhëna." },
       ],
     },
     support: {

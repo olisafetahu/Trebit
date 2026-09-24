@@ -99,12 +99,12 @@ export const en: Dictionary = {
       title: "Technology that keeps your business moving.",
       intro: "From infrastructure and cloud to security, integrations and automation, KuBIT keeps your technology stable and ready to grow.",
       items: [
-        { title: "Managed IT", text: "Ongoing monitoring, maintenance and support for your systems and users." },
-        { title: "Infrastructure", text: "Servers, networks, Wi-Fi, firewalls and equipment configured for secure work." },
-        { title: "Security & Backup", text: "Data protection, backups and recovery processes for business continuity." },
-        { title: "Cloud", text: "Cloud services tailored for access, collaboration and scale." },
-        { title: "Integration", text: "Connect your systems so data and processes flow without friction." },
-        { title: "Analytics & Automation", text: "Reporting and automation that help you work faster and decide better." },
+        { title: "Managed IT", text: "We monitor, maintain and support your systems every day so your team has stable technology ready for work. From user requests to critical issues, we respond with clear processes and priorities." },
+        { title: "Infrastructure", text: "We plan and manage servers, networks, Wi-Fi, firewalls and the equipment your business depends on. Infrastructure is documented, standardised and prepared for growth, security and continuity." },
+        { title: "Security & Backup", text: "We protect data and systems with security policies, controlled backups and recovery plans. This helps your business keep operating through mistakes, data loss or unexpected disruption." },
+        { title: "Cloud", text: "We configure cloud services that give teams secure access, easier collaboration and flexibility to scale. Solutions are shaped around your applications, users and real business requirements." },
+        { title: "Integration", text: "We connect ERP, POS, devices and other systems so information moves without duplicate entry or disconnected processes. Integrations make work faster, more accurate and easier to control." },
+        { title: "Analytics & Automation", text: "We turn operational data into clear reports and automate repetitive tasks. You save time, spot issues earlier and make decisions based on reliable information." },
       ],
     },
     support: {
