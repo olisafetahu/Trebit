@@ -140,6 +140,12 @@ h3,
   border-radius: var(--radius);
   background: var(--white);
   box-shadow: 0 10px 30px rgba(22, 18, 58, .04);
+  transition: transform .25s ease, box-shadow .25s ease;
+}
+
+.service-page-item:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow);
 }
 
 .service-page-icon {
@@ -182,6 +188,12 @@ h3,
   background: var(--white);
   text-align: center;
   font-weight: 650;
+  transition: transform .25s ease, box-shadow .25s ease;
+}
+
+.partners-page-grid span:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow);
 }
 
 .packages-products {

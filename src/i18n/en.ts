@@ -124,7 +124,7 @@ export const en: Dictionary = {
       title: "Trebit Solutions and KuBIT Partnership.",
       intro: "Trebit Solutions delivers integrated business solutions, while the KuBIT partnership connects software, hardware and IT services in one ecosystem.",
       partnersTitle: "Our partners",
-      partners: ["Balfin", "Toshiba", "Pricer", "Diebold Nixdorf", "Swinto", "ISA4D", "NLB Bank", "MIKA", "NOVA", "Tretech", "TIME", "FEGO"],
+      partners: ["KuBIT", "TreTek"],
     },
   },
   industries: {

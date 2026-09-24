@@ -8,7 +8,7 @@ type FooterProps = {
 
 export function Footer({ onLegal }: FooterProps) {
   const { t } = useI18n()
-  const partners = ["Balfin", "Toshiba", "Pricer", "Diebold Nixdorf", "Swinto", "ISA4D", "NLB Bank", "MIKA", "NOVA", "Tretech", "TIME", "FEGO"]
+  const partners = t.servicePages.about.partners
 
   return (
     <footer className="footer">
