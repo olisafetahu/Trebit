@@ -1748,6 +1748,9 @@ h3,
 
   .hero-grid {
     gap: 28px;
+    opacity: 1;
+    transform: none;
+    animation: none;
   }
 
   .hero-stage,
