@@ -1619,8 +1619,10 @@ h3,
 
   .hero-grid,
   .contact,
-  .footer-top,
-  .showcase-progress { height: 3px; margin: -20px 0 30px; overflow: hidden; border-radius: 999px; background: rgba(255, 255, 255, .12); }
+  .footer-top {
+    grid-template-columns: 1fr;
+  }
+
 .showcase-progress span { display: block; width: 100%; height: 100%; transform-origin: left; background: linear-gradient(90deg, var(--mint), #8a7dff); animation: showcase-progress linear forwards; }
 .showcase-stage { min-height: 520px; }
 .story-slide { position: relative; min-height: 520px; overflow: hidden; padding: clamp(34px, 6vw, 76px); border: 1px solid rgba(255, 255, 255, .08); border-radius: 22px; color: #eceaf8; background: radial-gradient(480px 280px at 88% 12%, rgba(23, 201, 160, .17), transparent 65%), linear-gradient(140deg, #1a173c, #100f26); box-shadow: 0 30px 80px rgba(0, 0, 0, .28); animation: story-enter .45s ease both; }
@@ -1786,6 +1788,45 @@ h3,
   .footer-top nav {
     grid-template-columns: repeat(2, 1fr);
   }
+
+  .nav-inner {
+    width: min(var(--max), calc(100% - 24px));
+    min-height: 64px;
+  }
+
+  .nav-actions .btn-primary {
+    display: none;
+  }
+
+  .mobile-drawer {
+    top: 64px;
+    max-height: calc(100dvh - 64px);
+    overflow-y: auto;
+  }
+
+  .hero,
+  .strip,
+  .section,
+  .showcase,
+  .about,
+  .final-cta,
+  .erp-section {
+    width: min(var(--max), calc(100% - 24px));
+  }
+
+  .hero-copy h1 {
+    font-size: clamp(2rem, 10vw, 3rem);
+  }
+
+  .hero-stage,
+  .hero-feature-stage {
+    width: 100%;
+  }
+
+  .packages-product-copy p,
+  .service-page-item p {
+    overflow-wrap: anywhere;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -1813,6 +1854,33 @@ h3,
 
   .hero-ctas .btn {
     width: 100%;
+  }
+
+  .hero-slider-controls {
+    gap: 6px;
+  }
+
+  .hero-slider-controls > div {
+    gap: 4px;
+  }
+
+  .hero-slider-controls > div button {
+    padding: 0 9px;
+    font-size: .74rem;
+  }
+
+  .hero-slider-controls > button {
+    width: 32px;
+    height: 32px;
+  }
+
+  .packages-page-hero h1,
+  .service-page-hero h1 {
+    font-size: 2.1rem;
+  }
+
+  .footer-top nav {
+    grid-template-columns: 1fr;
   }
 
   .device-phone {
