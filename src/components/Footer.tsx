@@ -8,7 +8,6 @@ type FooterProps = {
 
 export function Footer({ onLegal }: FooterProps) {
   const { t } = useI18n()
-  const partners = t.servicePages.about.partners
 
   return (
     <footer className="footer">
@@ -21,17 +20,25 @@ export function Footer({ onLegal }: FooterProps) {
           {t.nav.groups.map((group) => (
             <div className="footer-group" key={group.label}>
               <strong>{group.label}</strong>
-              {group.items.slice(0, 4).map((item) => <a href={item.href} key={item.label}>{item.label}</a>)}
+              {group.items
+                .filter((item) => item.label !== "Kontakt" && item.label !== "Contact")
+                .slice(0, 4)
+                .map((item) => <a href={item.href} key={item.label}>{item.label}</a>)}
             </div>
           ))}
-          <button type="button" onClick={() => onLegal("privacy")}>
-            {t.footer.privacy}
-          </button>
-          <button type="button" onClick={() => onLegal("terms")}>
-            {t.footer.terms}
-          </button>
+          <div className="footer-legal-links">
+            <button type="button" onClick={() => onLegal("privacy")}>
+              {t.footer.privacy}
+            </button>
+            <button type="button" onClick={() => onLegal("terms")}>
+              {t.footer.terms}
+            </button>
+          </div>
         </nav>
         <div className="social">
+          <span className="footer-contact-label">Na kontaktoni</span>
+          <a href={`mailto:${contact.email}`}>{contact.email}</a>
+          <a href={`tel:${contact.phone.replace(/\s/g, "")}`}>{contact.phone}</a>
           {contact.social.facebook && (
             <a href={contact.social.facebook} aria-label="Facebook">
               f
@@ -55,10 +62,6 @@ export function Footer({ onLegal }: FooterProps) {
             </div>
           )}
         </div>
-      </div>
-      <div className="partners" id="partneret">
-        <h3>Our Partners</h3>
-        <div>{partners.map((partner) => <span key={partner}>{partner}</span>)}</div>
       </div>
       <div className="footer-bottom">
         <p>{t.footer.kubit}</p>
