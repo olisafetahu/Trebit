@@ -27,12 +27,12 @@ export const sq: Dictionary = {
         { label: "Implementimi", href: "/pakot#implementimi", description: "Instalim, trajnim dhe migrim i të dhënave." },
       ] },
       { label: "PAJISJE", items: [
-        { label: "POS Systems", href: "/produkti" },
-        { label: "Printerë Termik", href: "/produkti" },
-        { label: "Barcode Scanner", href: "/produkti" },
-        { label: "PDA / Mobile Computers", href: "/produkti" },
-        { label: "Label Printers", href: "/produkti" },
-        { label: "Tablets", href: "/produkti" },
+        { label: "POS Systems", href: "/produkti#pos-systems" },
+        { label: "Printerë Termik", href: "/produkti#thermal-printers" },
+        { label: "Barcode Scanner", href: "/produkti#barcode-scanners" },
+        { label: "PDA / Mobile Computers", href: "/produkti#pda" },
+        { label: "Label Printers", href: "/produkti#label-printers" },
+        { label: "Tablets", href: "/produkti#tablets" },
       ] },
       { label: "SHËRBIME IT", items: [
         { label: "Managed IT", href: "/sherbime-it" },
@@ -148,6 +148,18 @@ export const sq: Dictionary = {
         { title: "Standardizim dhe Lifecycle Management", text: "Konfigurime të njëjta, inventar i qartë, përditësime dhe planifikim për çdo fazë të jetës së pajisjes." },
         { title: "Hardware as a Service", text: "Pajisje, konfigurim, mirëmbajtje dhe zëvendësim në një model fleksibil, pa investim të madh fillestar." },
       ],
+    },
+    hardwareProducts: {
+      title: "Produkte Hardware",
+      subtitle: "Pajisje të zgjedhura për biznesin tuaj",
+      categories: {
+        "pos-systems": "Sisteme POS",
+        "barcode-scanners": "Skanerë Barkodi",
+        "label-printers": "Printerë Etiketash",
+        "thermal-printers": "Printerë Termik",
+        "pda": "PDA / Kompjuterë Mobile",
+        "tablets": "Tableta"
+      }
     },
   },
   servicePages: {

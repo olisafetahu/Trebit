@@ -2,6 +2,7 @@ import { useEffect } from "react"
 import { ArrowDown, Boxes, CreditCard, Laptop, Network, Printer, ShieldCheck, TabletSmartphone, Wifi } from "lucide-react"
 import { Product } from "./Product"
 import { Security } from "./Security"
+import { HardwareProducts } from "./HardwareProducts"
 import { useI18n } from "../i18n"
 
 const hardwareIcons = [CreditCard, Laptop, Network, ShieldCheck]
@@ -61,6 +62,8 @@ export function ProductPage() {
         </div>
         <div className="hardware-visual" aria-hidden="true"><Laptop /><Printer /><Wifi /></div>
       </section>
+
+      <HardwareProducts />
     </main>
   )
 }

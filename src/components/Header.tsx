@@ -47,17 +47,39 @@ export function Header({ scrolled, open, onToggle }: HeaderProps) {
     if (shouldClose) event.currentTarget.blur()
   }
 
+  const handleMenuEnter = (label: string) => {
+    // Only open on hover if not locked by another menu
+    if (lockedMenu === null || lockedMenu === label) {
+      setLockedMenu(label)
+    }
+  }
+
+  const handleMenuLeave = () => {
+    // Don't close if locked by click
+    if (lockedMenu !== null) {
+      return
+    }
+    // Small delay to allow moving to dropdown
+    setTimeout(() => {
+      setLockedMenu(null)
+    }, 200)
+  }
+
   return (
     <header ref={headerRef} className={`nav ${scrolled ? "nav--scrolled" : ""} ${open ? "nav--open" : ""}`}>
       <div className="nav-inner">
         <Logo />
 
-        <nav className={`nav-links ${lockedMenu ? "nav-links--locked" : ""}`} aria-label="Kryesore">
+        <nav
+          className={`nav-links ${lockedMenu ? "nav-links--locked" : ""}`}
+          aria-label="Kryesore"
+        >
           {t.nav.groups.map((group, groupIndex) => (
             <div
               className={`nav-menu ${lockedMenu === group.label ? "is-open" : ""}`}
               key={group.label}
-              onMouseEnter={() => undefined}
+              onMouseEnter={() => handleMenuEnter(group.label)}
+              onMouseLeave={handleMenuLeave}
             >
               <button
                 type="button"

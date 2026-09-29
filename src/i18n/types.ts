@@ -61,6 +61,18 @@ export type Dictionary = {
     intro: string
     software: { label: string; title: string; text: string }
     hardware: { label: string; title: string; text: string; items: { title: string; text: string }[] }
+    hardwareProducts: {
+      title: string
+      subtitle: string
+      categories: {
+        "pos-systems": string
+        "barcode-scanners": string
+        "label-printers": string
+        "thermal-printers": string
+        "pda": string
+        "tablets": string
+      }
+    }
   }
   servicePages: {
     it: { eyebrow: string; title: string; intro: string; items: { title: string; text: string }[] }

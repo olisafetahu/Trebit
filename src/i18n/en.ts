@@ -22,7 +22,7 @@ export const en: Dictionary = {
         { label: "KuBIT ERP / Lite", href: "/pakot#kubit-erp", description: "Sales, stock, warehouses and finance in one system." }, { label: "KuBIT POS", href: "/pakot#kubit-pos", description: "A fast till for shops and supermarkets." }, { label: "KuBIT Bar", href: "/pakot#kubit-bar", description: "Table orders, kitchen flow and billing." }, { label: "Fiscalization", href: "/pakot#fiskalizimi", description: "Invoices that follow regulations, automatically." }, { label: "Packages", href: "/pakot#pakot", description: "Choose a plan for your business size." }, { label: "Implementation", href: "/pakot#implementimi", description: "Setup, training and data migration." },
       ] },
       { label: "DEVICES", items: [
-        { label: "POS Systems", href: "/produkti" }, { label: "Thermal Printers", href: "/produkti" }, { label: "Barcode Scanner", href: "/produkti" }, { label: "PDA / Mobile Computers", href: "/produkti" }, { label: "Label Printers", href: "/produkti" }, { label: "Tablets", href: "/produkti" },
+        { label: "POS Systems", href: "/produkti#pos-systems" }, { label: "Thermal Printers", href: "/produkti#thermal-printers" }, { label: "Barcode Scanner", href: "/produkti#barcode-scanners" }, { label: "PDA / Mobile Computers", href: "/produkti#pda" }, { label: "Label Printers", href: "/produkti#label-printers" }, { label: "Tablets", href: "/produkti#tablets" },
       ] },
       { label: "IT SERVICES", items: [
         { label: "Managed IT", href: "/sherbime-it" }, { label: "Infrastructure", href: "/sherbime-it" }, { label: "Security & Backup", href: "/sherbime-it" }, { label: "Cloud", href: "/sherbime-it" }, { label: "Integration", href: "/sherbime-it" }, { label: "Analytics & Automation", href: "/sherbime-it" },
@@ -91,6 +91,18 @@ export const en: Dictionary = {
         { title: "Standardisation and lifecycle management", text: "Consistent configuration, a clear inventory, updates and planning for every stage of a device’s life." },
         { title: "Hardware as a Service", text: "Equipment, configuration, maintenance and replacement in a flexible model without a large upfront investment." },
       ],
+    },
+    hardwareProducts: {
+      title: "Hardware Products",
+      subtitle: "Selected equipment for your business",
+      categories: {
+        "pos-systems": "POS Systems",
+        "barcode-scanners": "Barcode Scanners",
+        "label-printers": "Label Printers",
+        "thermal-printers": "Thermal Printers",
+        "pda": "PDA / Mobile Computers",
+        "tablets": "Tablets"
+      }
     },
   },
   servicePages: {
