@@ -60,7 +60,7 @@ export function ProductPage() {
             return <article className="hardware-item" key={item.title}><Icon size={27} strokeWidth={1.7} /><div><span>0{index + 1}</span><h3>{item.title}</h3><p>{item.text}</p></div></article>
           })}
         </div>
-        <div className="hardware-visual" aria-hidden="true"><Laptop /><Printer /><Wifi /></div>
+        {/* <div className="hardware-visual" aria-hidden="true"><Laptop /><Printer /><Wifi /></div> */}
       </section>
 
       <HardwareProducts />
