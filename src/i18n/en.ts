@@ -301,6 +301,32 @@ export const en: Dictionary = {
     kubit: "Trebit is part of the KuBIT ecosystem.",
     copyright: "© 2026 Trebit. All rights reserved.",
   },
+  home: {
+    erp: {
+      eyebrow: "ERP integration",
+      title: "Standalone, or connected to your ERP.",
+      text: "Trebit also works on its own, without an ERP. When you need it, it connects to the system you use and data moves by itself, with no double entry.",
+      pos: "Trebit POS",
+      posLabel: "Point of sale",
+      erp: "ERP",
+      erpLabel: "KuBIT ERP or your system",
+      flowOut: "sales →",
+      flowIn: "← items and prices",
+      points: ["Items and prices come from the ERP", "Every sale becomes a document", "Multiple registers and branches under one business"],
+      standalone: "No ERP? No problem. Trebit works on its own, with its own database.",
+    },
+    faq: {
+      eyebrow: "FAQ",
+      title: "Questions we hear most",
+      items: [
+        { q: "Do I need an ERP?", a: "No. Trebit can run completely on its own. If you have an ERP, or want to connect one later, we handle the integration." },
+        { q: "Does it work without internet?", a: "Selling can continue when the connection drops, and data syncs once it returns." },
+        { q: "What equipment do I need?", a: "It depends on your business: a register or tablet, a thermal printer, a barcode scanner. We recommend the right equipment and install it." },
+        { q: "Is staff training included?", a: "Yes. Installation includes staff training, so your team can work with the system as easily and simply as possible." },
+        { q: "What if I have a problem?", a: "Reach us through a ticket, WhatsApp or by phone. We also offer remote help for configuration and technical issues." },
+      ],
+    },
+  },
   legal: {
     privacyTitle: "Privacy policy",
     privacyBody:

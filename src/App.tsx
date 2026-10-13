@@ -11,6 +11,8 @@ import { LoginModal } from "./components/LoginModal"
 import { TrustStrip } from "./components/TrustStrip"
 import { ProductPage } from "./components/ProductPage"
 import { PackagesPage } from "./components/PackagesPage"
+import { ErpIntegration } from "./components/ErpIntegration"
+import { Faq } from "./components/Faq"
 import { ServicePage } from "./components/ServicePage"
 import { scrollToId } from "./hooks/scrollToId"
 import { useI18n } from "./i18n"
@@ -129,6 +131,8 @@ export default function App() {
         <HowItWorks />
         <ErpDashboardSection />
         <TrustStrip />
+        <ErpIntegration />
+        <Faq />
         <FinalCta />
         <Contact />
       </main>

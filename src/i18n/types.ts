@@ -170,6 +170,10 @@ export type Dictionary = {
     kubit: string
     copyright: string
   }
+  home: {
+    erp: { eyebrow: string; title: string; text: string; pos: string; posLabel: string; erp: string; erpLabel: string; flowOut: string; flowIn: string; points: string[]; standalone: string }
+    faq: { eyebrow: string; title: string; items: { q: string; a: string }[] }
+  }
   legal: {
     privacyTitle: string
     privacyBody: string

@@ -414,6 +414,32 @@ export const sq: Dictionary = {
     kubit: "Trebit është pjesë e ekosistemit KuBIT.",
     copyright: "© 2026 Trebit. Të gjitha të drejtat e rezervuara.",
   },
+  home: {
+    erp: {
+      eyebrow: "Integrimi me ERP",
+      title: "I pavarur, ose i lidhur me ERP-në tuaj.",
+      text: "Trebit punon edhe më vete, pa ERP. Kur ju duhet, lidhet me sistemin që e përdorni dhe të dhënat lëvizin vetë, pa futje të dyfishtë.",
+      pos: "Trebit POS",
+      posLabel: "Pika e shitjes",
+      erp: "ERP",
+      erpLabel: "KuBIT ERP ose sistemi juaj",
+      flowOut: "shitjet →",
+      flowIn: "← artikujt dhe çmimet",
+      points: ["Artikujt dhe çmimet vijnë nga ERP-ja", "Çdo shitje kthehet si dokument", "Disa arka dhe degë nën një biznes"],
+      standalone: "Nuk keni ERP? Nuk ka problem. Trebit punon më vete, me bazën e vet.",
+    },
+    faq: {
+      eyebrow: "Pyetje të shpeshta",
+      title: "Pyetjet që bëhen më shpesh",
+      items: [
+        { q: "A më duhet një ERP?", a: "Jo. Trebit mund të punojë krejt i pavarur. Nëse keni ERP ose dëshironi ta lidhni më vonë, e bëjmë integrimin." },
+        { q: "A punon pa internet?", a: "Shitja mund të vazhdojë edhe kur interneti ndërpritet, dhe të dhënat sinkronizohen kur lidhja kthehet." },
+        { q: "Çfarë pajisjesh më duhen?", a: "Varet nga biznesi: arkë ose tablet, printer termik, skaner barkodi. Ju këshillojmë pajisjet e duhura dhe i instalojmë." },
+        { q: "A bëhet trajnimi i stafit?", a: "Po. Instalimi përfshin trajnimin e stafit, që ekipi juaj të punojë me sistemin sa më lehtë dhe sa më thjeshtë." },
+        { q: "Çfarë ndodh nëse kam një problem?", a: "Na shkruani përmes WhatsApp-it ose na telefononi. Ofrojmë edhe ndihmë në distancë për konfigurime dhe probleme teknike." },
+      ],
+    },
+  },
   legal: {
     privacyTitle: "Politika e privatësisë",
     privacyBody:
