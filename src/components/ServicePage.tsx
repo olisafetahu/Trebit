@@ -53,7 +53,7 @@ export function ServicePage({ kind }: ServicePageProps) {
       </section>
       <section className="service-page-grid">
         {page.items.map((item) => (
-          <article className="service-page-item" key={item.title}>
+          <article className="service-page-item" id={item.title.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "")} key={item.title}>
             <span className="service-page-icon"><Icon size={25} strokeWidth={1.7} /></span>
             <h2>{item.title}</h2>
             <p>{item.text}</p>

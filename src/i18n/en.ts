@@ -25,10 +25,10 @@ export const en: Dictionary = {
         { label: "POS Systems", href: "/produkti#pos-systems" }, { label: "Thermal Printers", href: "/produkti#thermal-printers" }, { label: "Barcode Scanner", href: "/produkti#barcode-scanners" }, { label: "PDA / Mobile Computers", href: "/produkti#pda" }, { label: "Label Printers", href: "/produkti#label-printers" }, { label: "Tablets", href: "/produkti#tablets" },
       ] },
       { label: "IT SERVICES", items: [
-        { label: "Managed IT", href: "/sherbime-it" }, { label: "Infrastructure", href: "/sherbime-it" }, { label: "Security & Backup", href: "/sherbime-it" }, { label: "Cloud", href: "/sherbime-it" }, { label: "Integration", href: "/sherbime-it" }, { label: "Analytics & Automation", href: "/sherbime-it" },
+        { label: "Managed IT", href: "/sherbime-it#managed-it" }, { label: "Infrastructure", href: "/sherbime-it#infrastructure" }, { label: "Security & Backup", href: "/sherbime-it#security-backup" }, { label: "Cloud", href: "/sherbime-it#cloud" }, { label: "Integration", href: "/sherbime-it#integration" }, { label: "Analytics & Automation", href: "/sherbime-it#analytics-automation" },
       ] },
       { label: "SUPPORT", items: [
-        { label: "Open Ticket", href: "/support" }, { label: "WhatsApp Support", href: "/support" }, { label: "Remote Support", href: "/support" }, { label: "Knowledge Base", href: "/support" }, { label: "Downloads", href: "/support" },
+        { label: "Open Ticket", href: "/support#open-ticket" }, { label: "WhatsApp Support", href: "/support#whatsapp-support" }, { label: "Remote Support", href: "/support#remote-support" }, { label: "Knowledge Base", href: "/support#knowledge-base" }, { label: "Downloads", href: "/support#downloads" },
       ] },
       { label: "ABOUT US", items: [
         { label: "Trebit Solutions", href: "/rreth-nesh" }, { label: "KuBIT Partnership", href: "/rreth-nesh" }, { label: "Partners", href: "/rreth-nesh" }, { label: "Contact", href: "/rreth-nesh" },

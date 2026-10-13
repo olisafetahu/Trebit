@@ -57,7 +57,7 @@ export default function App() {
   }, [])
 
   useEffect(() => {
-    if (window.location.pathname !== "/" || !window.location.hash) return
+    if (!window.location.hash) return
 
     const target = window.location.hash
     const timeout = window.setTimeout(() => scrollToId(target), 100)
