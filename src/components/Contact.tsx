@@ -58,23 +58,23 @@ export function Contact() {
         ) : (
           <form className="form" onSubmit={onSubmit}>
             <label>
-              {t.contact.name}
+              <span>{t.contact.name}<span className="req" aria-hidden="true"> *</span></span>
               <input name="name" required autoComplete="name" />
             </label>
             <label>
               {t.contact.business}
-              <input name="business" required />
+              <input name="business" />
             </label>
             <label>
-              {t.contact.phone}
+              <span>{t.contact.phone}<span className="req" aria-hidden="true"> *</span></span>
               <input name="phone" required type="tel" autoComplete="tel" />
             </label>
             <label>
               {t.contact.email}
-              <input name="email" required type="email" autoComplete="email" />
+              <input name="email" type="email" autoComplete="email" />
             </label>
             <label>
-              {t.contact.type}
+              <span>{t.contact.type}<span className="req" aria-hidden="true"> *</span></span>
               <select name="type" required defaultValue="">
                 <option value="" disabled>
                   —
@@ -85,7 +85,7 @@ export function Contact() {
               </select>
             </label>
             <label>
-              {t.contact.package}
+              <span>{t.contact.package}<span className="req" aria-hidden="true"> *</span></span>
               <select name="package" required defaultValue="">
                 <option value="" disabled>
                   —
@@ -96,7 +96,7 @@ export function Contact() {
               </select>
             </label>
             <label className="form-full">
-              {t.contact.message}
+              <span>{t.contact.message}<span className="req" aria-hidden="true"> *</span></span>
               <textarea name="message" rows={4} required />
             </label>
             <button className="btn btn-primary" type="submit">

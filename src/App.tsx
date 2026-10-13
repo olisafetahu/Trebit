@@ -11,6 +11,7 @@ import { LoginModal } from "./components/LoginModal"
 import { TrustStrip } from "./components/TrustStrip"
 import { ProductPage } from "./components/ProductPage"
 import { PackagesPage } from "./components/PackagesPage"
+import { Industries } from "./components/Industries"
 import { ErpIntegration } from "./components/ErpIntegration"
 import { Faq } from "./components/Faq"
 import { ServicePage } from "./components/ServicePage"
@@ -129,6 +130,7 @@ export default function App() {
       <main>
         <Hero />
         <HowItWorks />
+        <Industries />
         <ErpDashboardSection />
         <TrustStrip />
         <ErpIntegration />
