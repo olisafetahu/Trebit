@@ -1510,8 +1510,8 @@ h3,
 
 .footer-top {
   display: grid;
-  grid-template-columns: minmax(220px, .85fr) minmax(0, 3fr) minmax(190px, .8fr);
-  gap: clamp(28px, 4vw, 72px);
+  grid-template-columns: minmax(240px, 1.1fr) minmax(0, 3fr);
+  gap: clamp(32px, 5vw, 88px);
   align-items: start;
 }
 
@@ -1525,16 +1525,23 @@ h3,
 .footer-group {
   display: grid;
   align-content: start;
-  gap: 5px;
+  gap: 10px;
   min-width: 0;
   overflow-wrap: anywhere;
 }
 
 .footer-group strong {
-  margin-bottom: 4px;
+  margin-bottom: 6px;
+  text-transform: uppercase;
   color: white;
   font-size: .76rem;
   letter-spacing: .08em;
+}
+
+.footer-top .footer-group a {
+  color: #aaa6cb;
+  font-size: .88rem;
+  transition: color .15s ease;
 }
 
 .footer-top a,
@@ -1548,12 +1555,38 @@ h3,
   padding: 0;
 }
 
+.footer-brand p {
+  max-width: 320px;
+  margin: 16px 0 24px;
+  color: #aaa6cb;
+  font-size: .9rem;
+  line-height: 1.6;
+}
+
+.footer-copy {
+  display: grid;
+  gap: 4px;
+}
+
+.footer-copy p,
+.footer-bottom p {
+  margin: 0;
+  color: #8f8bb3;
+}
+
 .footer-legal-links {
   display: flex;
   flex-wrap: wrap;
-  grid-column: 1 / -1;
   gap: 10px 24px;
-  padding-top: 8px;
+}
+
+.footer-legal-links button {
+  color: #aaa6cb;
+}
+
+.footer-legal-links button:hover,
+.footer-top .footer-group a:hover {
+  color: white;
 }
 
 .footer-contact-label {
@@ -1603,10 +1636,12 @@ h3,
 
 .footer-bottom {
   display: flex;
+  flex-wrap: wrap;
+  align-items: center;
   justify-content: space-between;
-  gap: 12px;
-  margin-top: 32px;
-  padding-top: 18px;
+  gap: 14px;
+  margin-top: 40px;
+  padding-top: 22px;
   border-top: 1px solid rgba(255, 255, 255, 0.08);
   font-size: 0.88rem;
 }
@@ -1669,7 +1704,8 @@ h3,
   }
 
   .footer-top nav {
-    grid-template-columns: repeat(5, minmax(0, 1fr));
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 28px 22px;
   }
 
 .showcase-progress span { display: block; width: 100%; height: 100%; transform-origin: left; background: linear-gradient(90deg, var(--mint), #8a7dff); animation: showcase-progress linear forwards; }
