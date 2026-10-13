@@ -65,7 +65,7 @@ export function ServicePage({ kind }: ServicePageProps) {
           </article>
         ))}
       </section>
-      <Contact />
+      {kind !== "it" && <Contact />}
     </main>
   )
 }
