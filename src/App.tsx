@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react"
-import { About } from "./components/About"
 import { Contact } from "./components/Contact"
 import { FinalCta } from "./components/FinalCta"
 import { Footer } from "./components/Footer"
@@ -130,7 +129,6 @@ export default function App() {
         <HowItWorks />
         <ErpDashboardSection />
         <TrustStrip />
-        <About />
         <FinalCta />
         <Contact />
       </main>
