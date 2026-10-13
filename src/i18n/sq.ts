@@ -402,7 +402,7 @@ export const sq: Dictionary = {
     submit: "Dërgo kërkesën",
     success: "Faleminderit. Kërkesa u ruajt. Ekipi i Trebit do të të kontaktojë sapo të jenë aktive kanalet e komunikimit.",
     types: ["Shërbime", "Berber", "Sallon bukurie", "Free Shop", "Butik", "Farmaci", "Market", "Retail", "Tjetër"],
-    websiteLabel: "Uebsajti",
+    websiteLabel: "Website",
     emailLabel: "Email",
     phoneLabel: "Telefoni",
     comingSoon: "Do të shtohet së shpejti",
@@ -443,10 +443,10 @@ export const sq: Dictionary = {
   legal: {
     privacyTitle: "Politika e privatësisë",
     privacyBody:
-      "Trebit respekton privatësinë e të dhënave që na dërgoni përmes këtij uebsajti. Të dhënat e formularit përdoren vetëm për t'iu përgjigjur kërkesës suaj për demo ose informacion. Kjo faqe do të përditësohet me politikën e plotë ligjore para lansimit publik.",
+      "Trebit respekton privatësinë e të dhënave që na dërgoni përmes këtij website. Të dhënat e formularit përdoren vetëm për t'iu përgjigjur kërkesës suaj për demo ose informacion. Kjo faqe do të përditësohet me politikën e plotë ligjore para lansimit publik.",
     termsTitle: "Kushtet e përdorimit",
     termsBody:
-      "Përmbajtja e këtij uebsajti është në pronësi të Trebit. Përshkrimet e produkteve dhe paketave janë informative. Kushtet e plota të shërbimit do të publikohen para aktivizimit të kontratave me klientët.",
+      "Përmbajtja e këtij website është në pronësi të Trebit. Përshkrimet e produkteve dhe paketave janë informative. Kushtet e plota të shërbimit do të publikohen para aktivizimit të kontratave me klientët.",
     back: "Kthehu në faqen kryesore",
   },
 }
