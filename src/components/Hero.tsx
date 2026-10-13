@@ -16,7 +16,7 @@ export function Hero() {
   ]
   const current = slides[active]
   const story = current.type === "erp" ? null : current
-  const storyLink = active === 1 ? "/produkti#software" : "/produkti#hardware"
+  const storyLink = active === 1 ? "/pakot" : "/produkti"
   const changeSlide = (index: number) => setActive((index + slides.length) % slides.length)
 
   useEffect(() => {

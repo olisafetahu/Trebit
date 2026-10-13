@@ -81,7 +81,7 @@ export const en: Dictionary = {
   productPage: {
     eyebrow: "Business solutions",
     title: "The right technology for the way your business works.",
-    intro: "Trebit brings together the software that organises operations and the reliable hardware that makes everyday work faster and safer.",
+    intro: "Equipment selected for your business, from registers and printers to scanners and tablets.",
     software: { label: "Software", title: "One platform for everyday work.", text: "From sales and fiscalisation to stock, reporting and managed IT operations, every process connects in one system." },
     hardware: {
       label: "Hardware", title: "Equipment ready for every point of work.", text: "We select, configure and support the equipment your business needs, from the till to the network.",

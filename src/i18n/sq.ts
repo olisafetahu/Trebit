@@ -138,7 +138,7 @@ export const sq: Dictionary = {
   productPage: {
     eyebrow: "Zgjidhje për biznesin",
     title: "Teknologjia e duhur për mënyrën si punon biznesi yt.",
-    intro: "Trebit bashkon softuerin që organizon operacionet me hardware-in e besueshëm që e bën punën e përditshme më të shpejtë dhe më të sigurt.",
+    intro: "Pajisje të përzgjedhura për biznesin tënd, nga arka dhe printerët deri te skanerët dhe tabletët.",
     software: { label: "Software", title: "Një platformë për punën e përditshme.", text: "Nga shitjet dhe fiskalizimi deri te stoku, raportet dhe operacionet e menaxhuara IT, çdo proces lidhet në një sistem të vetëm." },
     hardware: {
       label: "Hardware", title: "Pajisje të gatshme për çdo pikë pune.", text: "Përzgjedhim, konfigurojmë dhe mbështesim pajisjet që i duhen biznesit tënd, nga arka deri te rrjeti.",

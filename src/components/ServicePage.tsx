@@ -1,7 +1,7 @@
 import { useI18n } from "../i18n"
 import { useReveal } from "../hooks/useReveal"
-import { Contact } from "./Contact"
 import { About } from "./About"
+import { ContactCta } from "./ContactCta"
 import { Server, LifeBuoy, Building2 } from "lucide-react"
 
 type ServicePageProps = {
@@ -37,7 +37,7 @@ export function ServicePage({ kind }: ServicePageProps) {
             {page.partners.map((partner) => <span key={partner}>{partner}</span>)}
           </div>
         </section>
-        <Contact />
+        <ContactCta />
       </main>
     )
   }
@@ -65,7 +65,7 @@ export function ServicePage({ kind }: ServicePageProps) {
           </article>
         ))}
       </section>
-      {kind !== "it" && <Contact />}
+      <ContactCta />
     </main>
   )
 }
