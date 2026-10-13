@@ -1,5 +1,5 @@
 import { useEffect } from "react"
-import { ArrowDown, Boxes, CreditCard, Laptop, Network, Printer, ShieldCheck, TabletSmartphone, Wifi } from "lucide-react"
+import { ArrowDown, Boxes, CreditCard, Laptop, Network, ShieldCheck, TabletSmartphone } from "lucide-react"
 import { Product } from "./Product"
 import { Security } from "./Security"
 import { HardwareProducts } from "./HardwareProducts"

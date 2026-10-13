@@ -52,7 +52,7 @@ export function DashboardShowcase() {
     </div>
     <div className="showcase-arrows">
       <button type="button" aria-label="Slide-i paraprak" onMouseEnter={() => showSlide(active - 1)} onClick={() => showSlide(active - 1)}><ChevronLeft size={23} /></button>
-      <button type="button "aria-label="Slide-i pasues" onMouseEnter={() => showSlide(active + 1)} onClick={() => showSlide(active + 1)}><ChevronRight size={23} /></button>
+      <button type="button" aria-label="Slide-i pasues" onMouseEnter={() => showSlide(active + 1)} onClick={() => showSlide(active + 1)}><ChevronRight size={23} /></button>
     </div>    <div className="showcase-controls" role="tablist" aria-label="Shërbimet Trebit">{slides.map((item, index) => <button type="button" key={item.title} className={index === active ? "is-active" : ""} onMouseEnter={() => showSlide(index)} onClick={() => showSlide(index)} role="tab" aria-selected={index === active}><span>0{index + 1}</span>{index === active && <strong>{index === 0 ? "Dashboard" : item.title}</strong>}</button>)}</div>
   </section>
 }

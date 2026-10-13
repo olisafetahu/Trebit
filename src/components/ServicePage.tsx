@@ -57,9 +57,9 @@ export function ServicePage({ kind }: ServicePageProps) {
             <span className="service-page-icon"><Icon size={25} strokeWidth={1.7} /></span>
             <h2>{item.title}</h2>
             <p>{item.text}</p>
-            {"points" in item && item.points && (
+            {(item as { points?: string[] }).points && (
               <ul className="service-page-points">
-                {item.points.map((point) => <li key={point}>{point}</li>)}
+                {(item as { points?: string[] }).points!.map((point) => <li key={point}>{point}</li>)}
               </ul>
             )}
           </article>
