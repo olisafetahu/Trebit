@@ -1,3 +1,4 @@
+import { FileText, ShieldCheck } from "lucide-react"
 import { useI18n } from "../i18n"
 
 type LegalPageProps = {
@@ -12,11 +13,14 @@ export function LegalPage({ kind, onBack }: LegalPageProps) {
 
   return (
     <main className="legal">
-      <button type="button" className="btn btn-outline" onClick={onBack}>
-        {t.legal.back}
+      <button type="button" className="btn btn-outline legal-back" onClick={onBack}>
+        ← {t.legal.back}
       </button>
-      <h1>{title}</h1>
-      <p>{body}</p>
+      <section className="legal-card">
+        <span className="legal-icon">{kind === "privacy" ? <ShieldCheck size={26} strokeWidth={1.7} /> : <FileText size={26} strokeWidth={1.7} />}</span>
+        <h1>{title}</h1>
+        <p>{body}</p>
+      </section>
     </main>
   )
 }
