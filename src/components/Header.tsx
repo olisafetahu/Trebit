@@ -21,6 +21,8 @@ type HeaderProps = {
 export function Header({ scrolled, open, onToggle }: HeaderProps) {
   const { t, locale, setLocale } = useI18n()
   const [lockedMenu, setLockedMenu] = useState<string | null>(null)
+  const [hoveredMenu, setHoveredMenu] = useState<string | null>(null)
+  const leaveTimer = useRef<ReturnType<typeof setTimeout> | null>(null)
   const headerRef = useRef<HTMLElement>(null)
   const onInnerPage = ["/produkti", "/pakot", "/sherbime-it", "/support", "/rreth-nesh"].includes(window.location.pathname.toLowerCase())
 
@@ -44,26 +46,27 @@ export function Header({ scrolled, open, onToggle }: HeaderProps) {
     event.stopPropagation()
     const shouldClose = lockedMenu === label
     setLockedMenu(shouldClose ? null : label)
-    if (shouldClose) event.currentTarget.blur()
-  }
-
-  const handleMenuEnter = (label: string) => {
-    // Only open on hover if not locked by another menu
-    if (lockedMenu === null || lockedMenu === label) {
-      setLockedMenu(label)
+    if (shouldClose) {
+      setHoveredMenu(null)
+      event.currentTarget.blur()
     }
   }
 
-  const handleMenuLeave = () => {
-    // Don't close if locked by click
-    if (lockedMenu !== null) {
-      return
-    }
-    // Small delay to allow moving to dropdown
-    setTimeout(() => {
-      setLockedMenu(null)
-    }, 200)
+  const handleMenuEnter = (label: string, fromTrigger: boolean) => {
+    if (leaveTimer.current) clearTimeout(leaveTimer.current)
+    // Another menu is open: only its trigger may replace it, never its hover bridge or panel area
+    if (!fromTrigger && hoveredMenu !== null && hoveredMenu !== label) return
+    setHoveredMenu(label)
   }
+
+  const handleMenuLeave = (label: string) => {
+    if (leaveTimer.current) clearTimeout(leaveTimer.current)
+    leaveTimer.current = setTimeout(() => {
+      setHoveredMenu((current) => (current === label ? null : current))
+    }, 120)
+  }
+
+  const activeMenu = hoveredMenu ?? lockedMenu
 
   return (
     <header ref={headerRef} className={`nav ${scrolled ? "nav--scrolled" : ""} ${open ? "nav--open" : ""}`}>
@@ -71,21 +74,22 @@ export function Header({ scrolled, open, onToggle }: HeaderProps) {
         <Logo />
 
         <nav
-          className={`nav-links ${lockedMenu ? "nav-links--locked" : ""}`}
+          className="nav-links"
           aria-label="Kryesore"
         >
           {t.nav.groups.map((group, groupIndex) => (
             <div
-              className={`nav-menu ${lockedMenu === group.label ? "is-open" : ""}`}
+              className={`nav-menu ${activeMenu === group.label ? "is-open" : ""}`}
               key={group.label}
-              onMouseEnter={() => handleMenuEnter(group.label)}
-              onMouseLeave={handleMenuLeave}
+              onMouseEnter={() => handleMenuEnter(group.label, false)}
+              onMouseLeave={() => handleMenuLeave(group.label)}
             >
               <button
                 type="button"
                 className="nav-menu-trigger"
                 aria-haspopup="true"
-                aria-expanded={lockedMenu === group.label}
+                onMouseEnter={() => handleMenuEnter(group.label, true)}
+                aria-expanded={activeMenu === group.label}
                 onClick={(event) => handleMenuTriggerClick(event, group.label)}
               >
                 {group.label}
