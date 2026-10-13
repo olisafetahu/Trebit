@@ -24,7 +24,6 @@ export function Header({ scrolled, open, onToggle }: HeaderProps) {
   const [hoveredMenu, setHoveredMenu] = useState<string | null>(null)
   const leaveTimer = useRef<ReturnType<typeof setTimeout> | null>(null)
   const headerRef = useRef<HTMLElement>(null)
-  const onInnerPage = ["/produkti", "/pakot", "/sherbime-it", "/support", "/rreth-nesh"].includes(window.location.pathname.toLowerCase())
 
   useEffect(() => {
     const closeOnOutsideClick = (event: MouseEvent) => {
@@ -127,9 +126,6 @@ export function Header({ scrolled, open, onToggle }: HeaderProps) {
               EN
             </button>
           </div>
-          <a className="btn btn-primary" href={onInnerPage ? "/#kontakt" : "#kontakt"}>
-            {t.nav.demo}
-          </a>
           <button
             type="button"
             className="nav-burger"
