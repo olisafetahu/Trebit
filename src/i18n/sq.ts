@@ -417,7 +417,7 @@ export const sq: Dictionary = {
   home: {
     erp: {
       eyebrow: "Integrimi me ERP",
-      title: "I pavarur, ose i lidhur me ERP-në tuaj.",
+      title: "I pavarur, ose i lidhur me ERP tuaj.",
       text: "Trebit punon edhe më vete, pa ERP. Kur ju duhet, lidhet me sistemin që e përdorni dhe të dhënat lëvizin vetë, pa futje të dyfishtë.",
       pos: "Trebit POS",
       posLabel: "Pika e shitjes",
