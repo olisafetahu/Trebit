@@ -7,7 +7,7 @@ import { useReveal } from "../hooks/useReveal"
 const STORAGE_KEY = "trebit-contact-requests"
 
 export function Contact() {
-  const { t } = useI18n()
+  const { t, locale } = useI18n()
   const { ref, visible } = useReveal<HTMLElement>()
   const [sent, setSent] = useState(false)
 
@@ -67,11 +67,29 @@ export function Contact() {
             </label>
             <label>
               <span>{t.contact.phone}<span className="req" aria-hidden="true"> *</span></span>
-              <input name="phone" required type="tel" autoComplete="tel" />
+              <input
+                name="phone"
+                required
+                type="tel"
+                inputMode="tel"
+                autoComplete="tel"
+                pattern="\+?[0-9]{6,15}"
+                title={locale === "sq" ? "Shkruaj vetëm numra, p.sh. 044123456 ose +38344123456" : "Enter numbers only, e.g. 044123456 or +38344123456"}
+                onInput={(event) => {
+                  const input = event.currentTarget
+                  input.value = input.value.replace(/[^\d+]/g, "").replace(/(?!^)\+/g, "")
+                }}
+              />
             </label>
             <label>
               {t.contact.email}
-              <input name="email" type="email" autoComplete="email" />
+              <input
+                name="email"
+                type="email"
+                autoComplete="email"
+                pattern="[^@\s]+@[^@\s]+\.[^@\s]{2,}"
+                title={locale === "sq" ? "Shkruaj një email të vlefshëm, p.sh. emri@kompania.com" : "Enter a valid email, e.g. name@company.com"}
+              />
             </label>
             <label>
               <span>{t.contact.type}<span className="req" aria-hidden="true"> *</span></span>
