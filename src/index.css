@@ -18,6 +18,30 @@
   --display: "Outfit", system-ui, sans-serif;
   --body: "Source Sans 3", system-ui, sans-serif;
   --max: 1180px;
+  --nav-bg: rgba(244, 242, 251, 0.88);
+  --lang-bg: rgba(22, 18, 58, 0.05);
+  --glass: rgba(255, 255, 255, .75);
+  --field-bg: #fbfaff;
+  --band-bg: rgba(235, 231, 247, 0.48);
+  color-scheme: light;
+}
+
+:root[data-theme="dark"] {
+  --ink: #ece9ff;
+  --ink-soft: #a9a6c9;
+  --paper: #0f0d24;
+  --paper-2: #171434;
+  --white: #1a1740;
+  --brand: #7b6cff;
+  --line: rgba(255, 255, 255, 0.1);
+  --shadow: 0 24px 50px rgba(0, 0, 0, 0.5);
+  --shadow-float: 0 22px 46px rgba(123, 108, 255, 0.28), 0 6px 16px rgba(0, 0, 0, 0.35);
+  --nav-bg: rgba(15, 13, 36, 0.88);
+  --lang-bg: rgba(255, 255, 255, 0.07);
+  --glass: rgba(26, 23, 64, .75);
+  --field-bg: #211d4d;
+  --band-bg: rgba(255, 255, 255, 0.03);
+  color-scheme: dark;
 }
 
 *,
@@ -243,7 +267,7 @@ h3,
 
 .packages-product:nth-child(even) {
   grid-template-columns: minmax(0, 1.2fr) minmax(260px, 0.8fr);
-  background: rgba(235, 231, 247, 0.48);
+  background: var(--band-bg);
 }
 
 .packages-product:nth-child(even) .packages-product-copy {
@@ -452,7 +476,7 @@ h3,
 }
 
 .nav--scrolled {
-  background: rgba(244, 242, 251, 0.88);
+  background: var(--nav-bg);
   backdrop-filter: blur(16px);
   box-shadow: 0 8px 30px rgba(22, 18, 58, 0.06);
 }
@@ -623,7 +647,7 @@ h3,
   display: flex;
   padding: 3px;
   border-radius: 999px;
-  background: rgba(22, 18, 58, 0.05);
+  background: var(--lang-bg);
 }
 
 .lang button {
@@ -636,7 +660,7 @@ h3,
 }
 
 .lang .is-active {
-  background: white;
+  background: var(--white);
   color: var(--ink);
 }
 
@@ -804,8 +828,8 @@ h3,
 .hero-feature-stage li svg { color: var(--mint); }
 .hero-slider-controls { display: flex; align-items: center; justify-content: center; gap: 14px; margin-top: 18px; }
 .hero-slider-controls > div { display: flex; gap: 7px; }
-.hero-slider-controls button { display: grid; width: 38px; height: 38px; place-items: center; border: 1px solid var(--line); border-radius: 50%; color: var(--ink-soft); background: rgba(255, 255, 255, .75); cursor: pointer; transition: transform .3s ease, background .3s ease, color .3s ease; }
-.hero-slider-controls > div button { width: auto; height: 36px; padding: 0 14px; border: 1px solid var(--line); border-radius: 999px; background: rgba(255, 255, 255, .75); font-size: .82rem; }
+.hero-slider-controls button { display: grid; width: 38px; height: 38px; place-items: center; border: 1px solid var(--line); border-radius: 50%; color: var(--ink-soft); background: var(--glass); cursor: pointer; transition: transform .3s ease, background .3s ease, color .3s ease; }
+.hero-slider-controls > div button { width: auto; height: 36px; padding: 0 14px; border: 1px solid var(--line); border-radius: 999px; background: var(--glass); font-size: .82rem; }
 .hero-slider-controls > div button.is-active { width: auto; border-radius: 999px; color: white; background: var(--brand); }
 .hero-slider-controls button:hover { color: white; background: var(--brand); transform: scale(1.08); }
 .hero-slider-controls > div button:hover { background: var(--brand); }
@@ -870,7 +894,7 @@ h3,
   z-index: 5;
   padding: 9px 12px;
   border-radius: 14px;
-  background: white;
+  background: var(--white);
   box-shadow: 0 10px 24px rgba(22, 18, 58, 0.1);
   border: 1px solid rgba(22, 18, 58, 0.05);
   font-weight: 650;
@@ -1092,7 +1116,7 @@ h3,
 }
 
 .steps li {
-  background: white;
+  background: var(--white);
   border-radius: var(--radius);
   padding: 28px 24px;
   border: 1px solid var(--line);
@@ -1417,7 +1441,7 @@ h3,
 }
 
 .about-panel {
-  background: white;
+  background: var(--white);
   border-radius: 28px;
   padding: 48px;
   border: 1px solid var(--line);
@@ -1475,7 +1499,7 @@ h3,
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 12px;
-  background: white;
+  background: var(--white);
   padding: 22px;
   border-radius: 24px;
   border: 1px solid var(--line);
@@ -1498,7 +1522,7 @@ h3,
   border: 1px solid var(--line);
   border-radius: 12px;
   padding: 11px 12px;
-  background: #fbfaff;
+  background: var(--field-bg);
 }
 
 .form button {
@@ -1507,7 +1531,7 @@ h3,
 }
 
 .form-success {
-  background: white;
+  background: var(--white);
   padding: 28px;
   border-radius: 20px;
 }
@@ -1681,7 +1705,7 @@ h3,
 
 .modal {
   width: min(460px, 100%);
-  background: white;
+  background: var(--white);
   border-radius: 24px;
   padding: 28px;
 }
@@ -1812,8 +1836,8 @@ h3,
 .hero-feature-stage li svg { color: var(--mint); }
 .hero-slider-controls { display: flex; align-items: center; justify-content: center; gap: 14px; margin-top: 18px; }
 .hero-slider-controls > div { display: flex; gap: 7px; }
-.hero-slider-controls button { display: grid; width: 38px; height: 38px; place-items: center; border: 1px solid var(--line); border-radius: 50%; color: var(--ink-soft); background: rgba(255, 255, 255, .75); cursor: pointer; transition: transform .3s ease, background .3s ease, color .3s ease; }
-  .hero-slider-controls > div button { width: auto; height: 36px; padding: 0 14px; border: 1px solid var(--line); border-radius: 999px; background: rgba(255, 255, 255, .75); font-size: .82rem; }
+.hero-slider-controls button { display: grid; width: 38px; height: 38px; place-items: center; border: 1px solid var(--line); border-radius: 50%; color: var(--ink-soft); background: var(--glass); cursor: pointer; transition: transform .3s ease, background .3s ease, color .3s ease; }
+  .hero-slider-controls > div button { width: auto; height: 36px; padding: 0 14px; border: 1px solid var(--line); border-radius: 999px; background: var(--glass); font-size: .82rem; }
   .hero-slider-controls > div button.is-active { width: auto; border-radius: 999px; color: white; background: var(--brand); }
 .hero-slider-controls button:hover { color: white; background: var(--brand); transform: scale(1.08); }
 .hero-slider-controls > div button:hover { background: var(--brand); }
@@ -2083,7 +2107,7 @@ h3,
 }
 
 .hardware-product-card {
-  background: white;
+  background: var(--white);
   border-radius: 16px;
   border: 1px solid var(--line);
   overflow: hidden;
@@ -2369,4 +2393,23 @@ h3,
   margin: 0;
   color: #c62828;
   font-size: .92rem;
+}
+
+
+.theme-toggle {
+  display: grid;
+  width: 36px;
+  height: 36px;
+  place-items: center;
+  border: 0;
+  border-radius: 50%;
+  color: var(--ink-soft);
+  background: var(--lang-bg);
+  cursor: pointer;
+  transition: color .2s ease, transform .2s ease;
+}
+
+.theme-toggle:hover {
+  color: var(--ink);
+  transform: rotate(12deg);
 }

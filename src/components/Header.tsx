@@ -2,7 +2,8 @@ import { Logo } from "./Logo"
 import { useEffect, useRef, useState } from "react"
 import type { MouseEvent as ReactMouseEvent } from "react"
 import { useI18n } from "../i18n"
-import { BarChart3, Boxes, Coffee, FileText, Monitor, Package, Wrench } from "lucide-react"
+import { BarChart3, Boxes, Coffee, FileText, Monitor, Moon, Package, Sun, Wrench } from "lucide-react"
+import { useTheme } from "../hooks/useTheme"
 
 const menuIcons = [
   [BarChart3, Monitor, Coffee, FileText, Package, Wrench],
@@ -20,6 +21,7 @@ type HeaderProps = {
 
 export function Header({ scrolled, open, onToggle }: HeaderProps) {
   const { t, locale, setLocale } = useI18n()
+  const { theme, toggleTheme } = useTheme()
   const [lockedMenu, setLockedMenu] = useState<string | null>(null)
   const [hoveredMenu, setHoveredMenu] = useState<string | null>(null)
   const leaveTimer = useRef<ReturnType<typeof setTimeout> | null>(null)
@@ -110,6 +112,15 @@ export function Header({ scrolled, open, onToggle }: HeaderProps) {
         </nav>
 
         <div className="nav-actions">
+          <button
+            type="button"
+            className="theme-toggle"
+            onClick={toggleTheme}
+            aria-label={theme === "dark" ? "Light mode" : "Dark mode"}
+            title={theme === "dark" ? "Light mode" : "Dark mode"}
+          >
+            {theme === "dark" ? <Sun size={18} /> : <Moon size={18} />}
+          </button>
           <div className="lang" role="group" aria-label="Gjuha">
             <button
               type="button"
