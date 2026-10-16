@@ -4,27 +4,39 @@ import { packages } from "../data/packages"
 import { useI18n } from "../i18n"
 import { useReveal } from "../hooks/useReveal"
 
-const STORAGE_KEY = "trebit-contact-requests"
-
 export function Contact() {
   const { t, locale } = useI18n()
   const { ref, visible } = useReveal<HTMLElement>()
   const [sent, setSent] = useState(false)
+  const [sending, setSending] = useState(false)
+  const [failed, setFailed] = useState(false)
 
   const packageOptions = useMemo(
     () => packages.map((pkg) => t.pricing.items[pkg.id].name),
     [t],
   )
 
-  const onSubmit = (event: FormEvent<HTMLFormElement>) => {
+  const onSubmit = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault()
-    const form = new FormData(event.currentTarget)
-    const payload = Object.fromEntries(form.entries())
-    const existing = JSON.parse(localStorage.getItem(STORAGE_KEY) || "[]") as unknown[]
-    existing.push({ ...payload, at: new Date().toISOString() })
-    localStorage.setItem(STORAGE_KEY, JSON.stringify(existing))
-    setSent(true)
-    event.currentTarget.reset()
+    if (sending) return
+    const formEl = event.currentTarget
+    const payload = Object.fromEntries(new FormData(formEl).entries())
+    setSending(true)
+    setFailed(false)
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload),
+      })
+      if (!response.ok) throw new Error(String(response.status))
+      setSent(true)
+      formEl.reset()
+    } catch {
+      setFailed(true)
+    } finally {
+      setSending(false)
+    }
   }
 
   return (
@@ -117,9 +129,11 @@ export function Contact() {
               <span>{t.contact.message}<span className="req" aria-hidden="true"> *</span></span>
               <textarea name="message" rows={4} required />
             </label>
-            <button className="btn btn-primary" type="submit">
-              {t.contact.submit}
+            <input className="form-hp" name="company" tabIndex={-1} autoComplete="off" aria-hidden="true" />
+            <button className="btn btn-primary" type="submit" disabled={sending}>
+              {sending ? t.contact.sending : t.contact.submit}
             </button>
+            {failed && <p className="form-error" role="alert">{t.contact.error}</p>}
           </form>
         )}
       </div>

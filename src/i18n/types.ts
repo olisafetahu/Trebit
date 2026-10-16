@@ -157,6 +157,8 @@ export type Dictionary = {
     message: string
     submit: string
     success: string
+    sending: string
+    error: string
     types: string[]
     websiteLabel: string
     emailLabel: string
