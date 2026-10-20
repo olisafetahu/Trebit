@@ -33,6 +33,7 @@
   --paper-2: #171434;
   --white: #1a1740;
   --brand: #7b6cff;
+  --brand-2: #b9b2ff;
   --line: rgba(255, 255, 255, 0.1);
   --shadow: 0 24px 50px rgba(0, 0, 0, 0.5);
   --shadow-float: 0 22px 46px rgba(123, 108, 255, 0.28), 0 6px 16px rgba(0, 0, 0, 0.35);
@@ -2112,7 +2113,7 @@ h3,
 .hardware-category-title {
   margin: 0 0 24px;
   font-size: 1.4rem;
-  color: var(--deep);
+  color: var(--ink);
   border-bottom: 2px solid var(--line);
   padding-bottom: 12px;
 }
@@ -2175,7 +2176,7 @@ h3,
 .hardware-product-name {
   margin: 0 0 12px;
   font-size: 1.1rem;
-  color: var(--deep);
+  color: var(--ink);
 }
 
 .hardware-product-description {
