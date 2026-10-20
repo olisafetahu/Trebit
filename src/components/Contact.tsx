@@ -1,3 +1,4 @@
+import { MessengerLinks } from "./MessengerLinks"
 import { useMemo, useState, type FormEvent } from "react"
 import { contact } from "../data/contact"
 import { packages } from "../data/packages"
@@ -61,6 +62,9 @@ export function Contact() {
             <li>
               <span>{t.contact.phoneLabel}</span>
               {contact.phone ? <a href={`tel:${contact.phone}`}>{contact.phone}</a> : <em>{t.contact.comingSoon}</em>}
+            </li>
+            <li>
+              <MessengerLinks />
             </li>
           </ul>
         </div>

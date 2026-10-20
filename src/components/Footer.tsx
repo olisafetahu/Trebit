@@ -1,3 +1,4 @@
+import { MessengerLinks } from "./MessengerLinks"
 import { contact } from "../data/contact"
 import { Logo } from "./Logo"
 import { useI18n } from "../i18n"
@@ -19,6 +20,7 @@ export function Footer({ onLegal }: FooterProps) {
             <span className="footer-contact-label">{locale === "sq" ? "Na kontaktoni" : "Contact us"}</span>
             <a href={`mailto:${contact.email}`}>{contact.email}</a>
             <a href={`tel:${contact.phone.replace(/\s/g, "")}`}>{contact.phone}</a>
+            <MessengerLinks />
             {contact.social.facebook && <a href={contact.social.facebook} aria-label="Facebook">f</a>}
             {contact.social.instagram && <a href={contact.social.instagram} aria-label="Instagram">ig</a>}
             {contact.social.linkedin && <a href={contact.social.linkedin} aria-label="LinkedIn">in</a>}

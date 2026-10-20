@@ -1661,6 +1661,22 @@ h3,
   color: white;
 }
 
+.messenger-links,
+.contact-meta .messenger-links {
+  display: inline-flex;
+  gap: 26px;
+  align-items: center;
+}
+
+.messenger-icon {
+  display: inline-flex;
+  transition: transform .15s ease;
+}
+
+.messenger-icon:hover {
+  transform: translateY(-2px);
+}
+
 .social .social-idle,
 .social > a[aria-label] {
   margin-top: 7px;
