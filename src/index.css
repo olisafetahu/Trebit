@@ -54,6 +54,11 @@ html {
   scroll-behavior: smooth;
 }
 
+html,
+body {
+  overflow-x: clip;
+}
+
 body {
   margin: 0;
   font-family: var(--body);
@@ -2053,10 +2058,6 @@ h3,
 }
 
 @media (max-width: 390px) {
-  .footer-top nav {
-    grid-template-columns: 1fr;
-  }
-
   .section,
   
   .hero {
@@ -2428,4 +2429,112 @@ h3,
 .theme-toggle:hover {
   color: var(--ink);
   transform: rotate(12deg);
+}
+
+/* Mobile: compact cards and footer */
+@media (max-width: 768px) {
+  .industry-grid,
+  .strip-grid,
+  .bento,
+  .secure-grid,
+  .pricing-grid,
+  .hardware-products-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+  }
+
+  .industry-card,
+  .strip-card,
+  .bento-card,
+  .secure-card,
+  .price-card,
+  .hardware-product-card {
+    padding: 14px;
+  }
+
+  .industry-card,
+  .strip-card {
+    min-height: 170px;
+  }
+
+  .steps li {
+    min-height: 170px;
+  }
+
+  .industry-card h3,
+  .strip-card h3,
+  .bento-card h3,
+  .secure-card h3,
+  .price-card h3 {
+    margin: 8px 0 4px;
+    font-size: .95rem;
+  }
+
+  .industry-card p,
+  .strip-card p,
+  .bento-card p,
+  .secure-card p,
+  .price-desc {
+    font-size: .8rem;
+    line-height: 1.4;
+  }
+
+  .steps {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 10px;
+  }
+
+  .steps li {
+    grid-column: span 2;
+    padding: 14px;
+  }
+
+  .steps li:first-child {
+    grid-column: 2 / span 2;
+  }
+
+  .steps li h3 {
+    margin: 4px 0;
+    font-size: .95rem;
+  }
+
+  .steps li p {
+    margin: 0;
+    font-size: .8rem;
+    line-height: 1.4;
+  }
+
+  .steps span {
+    font-size: 1.1rem;
+  }
+
+  .footer-top {
+    gap: 20px;
+  }
+
+  .footer-top nav {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px 14px;
+  }
+
+  .footer-group {
+    gap: 6px;
+  }
+
+  .footer-group strong {
+    margin-bottom: 2px;
+  }
+
+  .footer-top .footer-group a {
+    font-size: .82rem;
+  }
+
+  .footer-brand p {
+    margin: 10px 0;
+  }
+
+  .footer-bottom {
+    padding: 18px 0;
+  }
 }
