@@ -50,12 +50,6 @@ export function Contact() {
           </div>
           <ul className="contact-meta">
             <li>
-              <span>{t.contact.websiteLabel}</span>
-              <a href={contact.websiteUrl} rel="noreferrer">
-                {contact.website}
-              </a>
-            </li>
-            <li>
               <span>{t.contact.emailLabel}</span>
               {contact.email ? <a href={`mailto:${contact.email}`}>{contact.email}</a> : <em>{t.contact.comingSoon}</em>}
             </li>

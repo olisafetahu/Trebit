@@ -542,6 +542,14 @@ h3,
   transition: transform .18s ease;
 }
 
+.nav-menu-trigger--link {
+  text-decoration: none;
+}
+
+.nav-menu-trigger--link::after {
+  display: none;
+}
+
 .nav-menu.is-open .nav-menu-trigger::after {
   margin-bottom: -2px;
   transform: rotate(225deg);

@@ -11,17 +11,17 @@ export const sq: Dictionary = {
   nav: {
     product: "Produktet",
     solutions: "Zgjidhjet",
-    packages: "KuBIT",
+    packages: "Sistemi",
     businesses: "Për biznese",
     about: "Rreth nesh",
     contact: "Kontakt",
     login: "Kyçu",
     demo: "Kërko Demo",
     groups: [
-      { label: "KUBIT", items: [
-        { label: "KuBIT ERP / Lite", href: "/pakot#kubit-erp", description: "Shitje, stok, depo dhe financa në një sistem." },
-        { label: "KuBIT POS", href: "/pakot#kubit-pos", description: "Arkë e shpejtë për dyqane dhe supermarkete." },
-        { label: "KuBIT Bar", href: "/pakot#kubit-bar", description: "Porosi në tavolinë, kuzhinë dhe faturim." },
+      { label: "SISTEMI", items: [
+        { label: "ERP / Lite", href: "/pakot#kubit-erp", description: "Shitje, stok, depo dhe financa në një sistem." },
+        { label: "POS", href: "/pakot#kubit-pos", description: "Arkë e shpejtë për dyqane dhe supermarkete." },
+        { label: "Bar", href: "/pakot#kubit-bar", description: "Porosi në tavolinë, kuzhinë dhe faturim." },
         { label: "Fiskalizimi", href: "/pakot#fiskalizimi", description: "Fatura në përputhje me ligjin, automatikisht." },
         { label: "Paketat", href: "/pakot#pakot", description: "Zgjidhni planin sipas madhësisë së biznesit." },
         { label: "Implementimi", href: "/pakot#implementimi", description: "Instalim, trajnim dhe migrim i të dhënave." },
@@ -49,10 +49,8 @@ export const sq: Dictionary = {
         { label: "Knowledge Base", href: "/support#knowledge-base" },
         { label: "Downloads", href: "/support#downloads" },
       ] },
-      { label: "RRETH NESH", items: [
+      { label: "RRETH NESH", href: "/rreth-nesh", items: [
         { label: "Trebit Solutions", href: "/rreth-nesh" },
-        { label: "KuBIT Partnership", href: "/rreth-nesh" },
-        { label: "Partnerët", href: "/rreth-nesh" },
         { label: "Kontakt", href: "/rreth-nesh" },
       ] },
     ],
@@ -166,7 +164,7 @@ export const sq: Dictionary = {
     it: {
       eyebrow: "Shërbime IT",
       title: "Teknologjia që e mban biznesin në lëvizje.",
-      intro: "Nga infrastruktura dhe cloud-i te siguria, integrimet dhe automatizimi, KuBIT ju ndihmon ta mbani teknologjinë të qëndrueshme dhe të gatshme për rritje.",
+      intro: "Nga infrastruktura dhe cloud-i te siguria, integrimet dhe automatizimi, Trebit ju ndihmon ta mbani teknologjinë të qëndrueshme dhe të gatshme për rritje.",
       items: [
         { title: "Managed IT", text: "Monitorojmë, mirëmbajmë dhe mbështesim sistemet tuaja çdo ditë, që ekipi të ketë teknologji të qëndrueshme dhe të gatshme për punë. Nga kërkesat e përdoruesve deri te problemet kritike, reagojmë me procese dhe prioritete të qarta.", points: ["Monitorim 24/7 i sistemeve", "Menaxhim i përdoruesve dhe pajisjeve", "Përditësime dhe mirëmbajtje e rregullt", "Raporte mujore të gjendjes"] },
         { title: "Infrastructure", text: "Planifikojmë dhe administrojmë serverët, rrjetin, Wi-Fi-n, firewall-in dhe pajisjet kryesore të biznesit. Infrastruktura dokumentohet, standardizohet dhe përgatitet për rritje, siguri dhe vazhdimësi më të mirë.", points: ["Serverë dhe rrjet LAN/Wi-Fi", "Konfigurim i firewall-it dhe VPN", "Dokumentim i plotë i infrastrukturës", "Planifikim për rritje"] },
@@ -190,10 +188,8 @@ export const sq: Dictionary = {
     },
     about: {
       eyebrow: "Rreth nesh",
-      title: "Trebit Solutions dhe KuBIT Partnership.",
-      intro: "Trebit Solutions sjell zgjidhje të integruara për bizneset, ndërsa partneriteti me KuBIT lidh software-in, hardware-in dhe shërbimet IT në një ekosistem të vetëm.",
-      partnersTitle: "Partnerët tanë",
-      partners: ["KuBIT", "TreTek"],
+      title: "Trebit Solutions.",
+      intro: "Trebit Solutions sjell zgjidhje të integruara për bizneset: software, hardware dhe shërbime IT në një ekosistem të vetëm.",
     },
   },
   industries: {
@@ -288,19 +284,19 @@ export const sq: Dictionary = {
     },
   },
   packagesPage: {
-    eyebrow: "KuBIT",
-    title: "KuBIT",
+    eyebrow: "Sistemi",
+    title: "Sistemi",
     intro: "Një ekosistem i plotë teknologjik për biznesin tuaj: nga menaxhimi i operacioneve dhe shitjeve, te shërbimi në lokal, paketat dhe implementimi i përshtatur.",
-    erp: { title: "KuBIT ERP Dashboard", text: "KuBIT ERP ju jep një pamje të qartë të gjithë biznesit. Menaxhoni shitjet, artikujt, stokun, depot, furnitorët, financat dhe raportet nga një sistem i vetëm. Të dhënat lidhen në kohë reale, në mënyrë që ju të kuptoni më shpejt çfarë po ndodh dhe të merrni vendime më të sigurta.", label: "Menaxhim i biznesit" },
-    pos: { title: "KuBIT POS", text: "KuBIT POS e thjeshton punën në arkë dhe e lidh atë drejtpërdrejt me ERP-në. Regjistroni shitjet, pranoni pagesat, menaxhoni artikujt dhe mbani kontroll mbi performancën e çdo pike të shitjes. Një përvojë e shpejtë për stafin dhe më shumë saktësi për biznesin.", label: "Shitje dhe pagesa" },
-    bar: { title: "KuBIT Bar", text: "KuBIT Bar është krijuar për kafene, bare dhe restorante që duan ta menaxhojnë shërbimin pa komplikime. Nga porosia në tavolinë dhe menaxhimi i artikujve, te kuzhina, arka dhe pagesa, çdo hap lidhet në një rrjedhë të vetme pune.", label: "Për kafene, bare dhe restorante" },
+    erp: { title: "ERP Dashboard", text: "ERP ju jep një pamje të qartë të gjithë biznesit. Menaxhoni shitjet, artikujt, stokun, depot, furnitorët, financat dhe raportet nga një sistem i vetëm. Të dhënat lidhen në kohë reale, në mënyrë që ju të kuptoni më shpejt çfarë po ndodh dhe të merrni vendime më të sigurta.", label: "Menaxhim i biznesit" },
+    pos: { title: "POS", text: "POS e thjeshton punën në arkë dhe e lidh atë drejtpërdrejt me ERP-në. Regjistroni shitjet, pranoni pagesat, menaxhoni artikujt dhe mbani kontroll mbi performancën e çdo pike të shitjes. Një përvojë e shpejtë për stafin dhe më shumë saktësi për biznesin.", label: "Shitje dhe pagesa" },
+    bar: { title: "Bar", text: "Bar është krijuar për kafene, bare dhe restorante që duan ta menaxhojnë shërbimin pa komplikime. Nga porosia në tavolinë dhe menaxhimi i artikujve, te kuzhina, arka dhe pagesa, çdo hap lidhet në një rrjedhë të vetme pune.", label: "Për kafene, bare dhe restorante" },
     pricingTitle: "Pakot",
     implementation: {
       title: "Implementimi",
-      text: "Implementimi i KuBIT përshtatet me mënyrën se si punon biznesi juaj. Ne analizojmë proceset, konfigurojmë sistemin, lidhim pajisjet dhe e përgatisim ekipin tuaj për përdorim të sigurt në përditshmëri.",
+      text: "Implementimi i Trebit përshtatet me mënyrën se si punon biznesi juaj. Ne analizojmë proceset, konfigurojmë sistemin, lidhim pajisjet dhe e përgatisim ekipin tuaj për përdorim të sigurt në përditshmëri.",
       steps: [
         { title: "Analiza e nevojave", text: "Përcaktojmë proceset dhe funksionalitetet që i duhen biznesit tuaj." },
-        { title: "Konfigurimi", text: "Përshtatim KuBIT me mënyrën e punës, përdoruesit dhe pajisjet tuaja." },
+        { title: "Konfigurimi", text: "Përshtatim Trebit me mënyrën e punës, përdoruesit dhe pajisjet tuaja." },
         { title: "Trajnimi dhe lansimi", text: "Trajnojmë ekipin dhe ju ndihmojmë ta nisni punën me siguri." },
       ],
     },
@@ -381,7 +377,6 @@ export const sq: Dictionary = {
   about: {
     title: "Rreth Trebit",
     text: "Trebit është një zgjidhje moderne për menaxhimin e bizneseve, e krijuar për t'i ndihmuar kompanitë të punojnë më thjeshtë, më organizuar dhe më efikas. Nga arka e ditës deri te raportet e muajit, Trebit mban operacionet të lidhura — pa e ndërlikuar punën.",
-    kubit: "Trebit është një njësi biznesi e KuBIT, e ndërtuar posaçërisht për ndërmarrjet që duan një platformë të qartë, të shpejtë dhe të gatshme për t'u rritur.",
   },
   cta: {
     title: "Je gati ta menaxhosh biznesin më ndryshe?",
@@ -404,7 +399,6 @@ export const sq: Dictionary = {
     sending: "Po dërgohet…",
     error: "Nuk e dërguam dot kërkesën. Provo përsëri ose na kontakto me telefon ose email.",
     types: ["Shërbime", "Berber", "Sallon bukurie", "Free Shop", "Butik", "Farmaci", "Market", "Retail", "Tjetër"],
-    websiteLabel: "Website",
     emailLabel: "Email",
     phoneLabel: "Telefoni",
     comingSoon: "Do të shtohet së shpejti",
@@ -413,7 +407,6 @@ export const sq: Dictionary = {
     blurb: "Zgjidhje moderne për menaxhimin e biznesit.",
     privacy: "Privatësia",
     terms: "Kushtet e përdorimit",
-    kubit: "Trebit është pjesë e ekosistemit KuBIT.",
     copyright: "© 2026 Trebit. Të gjitha të drejtat e rezervuara.",
   },
   home: {
@@ -424,7 +417,7 @@ export const sq: Dictionary = {
       pos: "Trebit POS",
       posLabel: "Pika e shitjes",
       erp: "ERP",
-      erpLabel: "KuBIT ERP ose sistemi juaj",
+      erpLabel: "ERP ose sistemi juaj",
       flowOut: "shitjet →",
       flowIn: "← artikujt dhe çmimet",
       points: ["Artikujt dhe çmimet vijnë nga ERP-ja", "Çdo shitje kthehet si dokument", "Disa arka dhe degë nën një biznes"],

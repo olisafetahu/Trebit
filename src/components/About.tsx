@@ -11,7 +11,6 @@ export function About() {
         <p className="eyebrow">Trebit</p>
         <h2>{t.about.title}</h2>
         <p>{t.about.text}</p>
-        <p className="about-note">{t.about.kubit}</p>
       </div>
     </section>
   )

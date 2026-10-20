@@ -47,7 +47,6 @@ export function Footer({ onLegal }: FooterProps) {
       <div className="footer-bottom">
         <div className="footer-copy">
           <p>{t.footer.copyright}</p>
-          <p>{t.footer.kubit}</p>
         </div>
         <div className="footer-legal-links">
           <button type="button" onClick={() => onLegal("privacy")}>{t.footer.privacy}</button>

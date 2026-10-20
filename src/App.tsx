@@ -94,10 +94,14 @@ export default function App() {
         <div className="mobile-drawer">
           {t.nav.groups.map((group) => (
             <div className="mobile-nav-group" key={group.label}>
-              <strong>{group.label}</strong>
-              {group.items.map((item) => (
-                <a href={item.href} key={item.label} onClick={() => setMenuOpen(false)}>{item.label}</a>
-              ))}
+              {group.href ? (
+                <a href={group.href} onClick={() => setMenuOpen(false)}><strong>{group.label}</strong></a>
+              ) : <>
+                <strong>{group.label}</strong>
+                {group.items.map((item) => (
+                  <a href={item.href} key={item.label} onClick={() => setMenuOpen(false)}>{item.label}</a>
+                ))}
+              </>}
             </div>
           ))}
           <a

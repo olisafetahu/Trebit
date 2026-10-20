@@ -11,15 +11,15 @@ export const en: Dictionary = {
   nav: {
     product: "Products",
     solutions: "Solutions",
-    packages: "KuBIT",
+    packages: "System",
     businesses: "For businesses",
     about: "About",
     contact: "Contact",
     login: "Log in",
     demo: "Request a demo",
     groups: [
-      { label: "KUBIT", items: [
-        { label: "KuBIT ERP / Lite", href: "/pakot#kubit-erp", description: "Sales, stock, warehouses and finance in one system." }, { label: "KuBIT POS", href: "/pakot#kubit-pos", description: "A fast till for shops and supermarkets." }, { label: "KuBIT Bar", href: "/pakot#kubit-bar", description: "Table orders, kitchen flow and billing." }, { label: "Fiscalization", href: "/pakot#fiskalizimi", description: "Invoices that follow regulations, automatically." }, { label: "Packages", href: "/pakot#pakot", description: "Choose a plan for your business size." }, { label: "Implementation", href: "/pakot#implementimi", description: "Setup, training and data migration." },
+      { label: "SYSTEM", items: [
+        { label: "ERP / Lite", href: "/pakot#kubit-erp", description: "Sales, stock, warehouses and finance in one system." }, { label: "POS", href: "/pakot#kubit-pos", description: "A fast till for shops and supermarkets." }, { label: "Bar", href: "/pakot#kubit-bar", description: "Table orders, kitchen flow and billing." }, { label: "Fiscalization", href: "/pakot#fiskalizimi", description: "Invoices that follow regulations, automatically." }, { label: "Packages", href: "/pakot#pakot", description: "Choose a plan for your business size." }, { label: "Implementation", href: "/pakot#implementimi", description: "Setup, training and data migration." },
       ] },
       { label: "DEVICES", items: [
         { label: "POS Systems", href: "/produkti#pos-systems" }, { label: "Thermal Printers", href: "/produkti#thermal-printers" }, { label: "Barcode Scanner", href: "/produkti#barcode-scanners" }, { label: "PDA / Mobile Computers", href: "/produkti#pda" }, { label: "Label Printers", href: "/produkti#label-printers" }, { label: "Tablets", href: "/produkti#tablets" },
@@ -30,8 +30,8 @@ export const en: Dictionary = {
       { label: "SUPPORT", items: [
         { label: "Open Ticket", href: "/support#open-ticket" }, { label: "WhatsApp Support", href: "/support#whatsapp-support" }, { label: "Remote Support", href: "/support#remote-support" }, { label: "Knowledge Base", href: "/support#knowledge-base" }, { label: "Downloads", href: "/support#downloads" },
       ] },
-      { label: "ABOUT US", items: [
-        { label: "Trebit Solutions", href: "/rreth-nesh" }, { label: "KuBIT Partnership", href: "/rreth-nesh" }, { label: "Partners", href: "/rreth-nesh" }, { label: "Contact", href: "/rreth-nesh" },
+      { label: "ABOUT US", href: "/rreth-nesh", items: [
+        { label: "Trebit Solutions", href: "/rreth-nesh" }, { label: "Contact", href: "/rreth-nesh" },
       ] },
     ],
   },
@@ -109,7 +109,7 @@ export const en: Dictionary = {
     it: {
       eyebrow: "IT Services",
       title: "Technology that keeps your business moving.",
-      intro: "From infrastructure and cloud to security, integrations and automation, KuBIT keeps your technology stable and ready to grow.",
+      intro: "From infrastructure and cloud to security, integrations and automation, Trebit keeps your technology stable and ready to grow.",
       items: [
         { title: "Managed IT", text: "We monitor, maintain and support your systems every day so your team has stable technology ready for work. From user requests to critical issues, we respond with clear processes and priorities.", points: ["24/7 system monitoring", "User and device management", "Regular updates and maintenance", "Monthly health reports"] },
         { title: "Infrastructure", text: "We plan and manage servers, networks, Wi-Fi, firewalls and the equipment your business depends on. Infrastructure is documented, standardised and prepared for growth, security and continuity.", points: ["Servers and LAN/Wi-Fi networks", "Firewall and VPN configuration", "Full infrastructure documentation", "Growth planning"] },
@@ -133,10 +133,8 @@ export const en: Dictionary = {
     },
     about: {
       eyebrow: "About us",
-      title: "Trebit Solutions and KuBIT Partnership.",
-      intro: "Trebit Solutions delivers integrated business solutions, while the KuBIT partnership connects software, hardware and IT services in one ecosystem.",
-      partnersTitle: "Our partners",
-      partners: ["KuBIT", "TreTek"],
+      title: "Trebit Solutions.",
+      intro: "Trebit Solutions delivers integrated business solutions: software, hardware and IT services in one ecosystem.",
     },
   },
   industries: {
@@ -187,19 +185,19 @@ export const en: Dictionary = {
     },
   },
   packagesPage: {
-    eyebrow: "KuBIT",
-    title: "KuBIT",
+    eyebrow: "System",
+    title: "System",
     intro: "A complete technology ecosystem for your business: from operations and sales management to service, packages and tailored implementation.",
-    erp: { title: "KuBIT ERP Dashboard", text: "KuBIT ERP gives you a clear view of the entire business. Manage sales, items, stock, warehouses, suppliers, finance and reporting from one system. Real-time connected data helps you understand what is happening and make more confident decisions.", label: "Business management" },
-    pos: { title: "KuBIT POS", text: "KuBIT POS simplifies work at the till and connects directly to ERP. Record sales, accept payments, manage items and track the performance of every sales point. A faster experience for staff and greater accuracy for the business.", label: "Sales and payments" },
-    bar: { title: "KuBIT Bar", text: "KuBIT Bar is designed for cafes, bars and restaurants that want simpler service management. From table orders and item management to the kitchen, till and payment, every step connects in one workflow.", label: "For cafes, bars and restaurants" },
+    erp: { title: "ERP Dashboard", text: "ERP gives you a clear view of the entire business. Manage sales, items, stock, warehouses, suppliers, finance and reporting from one system. Real-time connected data helps you understand what is happening and make more confident decisions.", label: "Business management" },
+    pos: { title: "POS", text: "POS simplifies work at the till and connects directly to ERP. Record sales, accept payments, manage items and track the performance of every sales point. A faster experience for staff and greater accuracy for the business.", label: "Sales and payments" },
+    bar: { title: "Bar", text: "Bar is designed for cafes, bars and restaurants that want simpler service management. From table orders and item management to the kitchen, till and payment, every step connects in one workflow.", label: "For cafes, bars and restaurants" },
     pricingTitle: "Packages",
     implementation: {
       title: "Implementation",
-      text: "KuBIT implementation is adapted to the way your business works. We analyse your processes, configure the system, connect the equipment and prepare your team for confident daily use.",
+      text: "Trebit implementation is adapted to the way your business works. We analyse your processes, configure the system, connect the equipment and prepare your team for confident daily use.",
       steps: [
         { title: "Needs analysis", text: "We define the processes and capabilities your business needs." },
-        { title: "Configuration", text: "We adapt KuBIT to your workflows, users and equipment." },
+        { title: "Configuration", text: "We adapt Trebit to your workflows, users and equipment." },
         { title: "Training and launch", text: "We train your team and help you start with confidence." },
       ],
     },
@@ -268,7 +266,6 @@ export const en: Dictionary = {
   about: {
     title: "About Trebit",
     text: "Trebit is a modern business-management solution, created to help companies work more simply, more organised and more efficiently. From the day’s till to the month’s reports, Trebit keeps operations connected — without making the work heavier.",
-    kubit: "Trebit is a business unit of KuBIT, built specifically for companies that want a clear, fast platform ready to grow.",
   },
   cta: {
     title: "Ready to run the business differently?",
@@ -291,7 +288,6 @@ export const en: Dictionary = {
     sending: "Sending…",
     error: "We couldn't send your request. Try again, or contact us by phone or email.",
     types: ["Services", "Barber", "Beauty salon", "Free Shop", "Boutique", "Pharmacy", "Market", "Retail", "Other"],
-    websiteLabel: "Website",
     emailLabel: "Email",
     phoneLabel: "Phone",
     comingSoon: "Coming soon",
@@ -300,7 +296,6 @@ export const en: Dictionary = {
     blurb: "Modern software for business management.",
     privacy: "Privacy",
     terms: "Terms of use",
-    kubit: "Trebit is part of the KuBIT ecosystem.",
     copyright: "© 2026 Trebit. All rights reserved.",
   },
   home: {
@@ -311,7 +306,7 @@ export const en: Dictionary = {
       pos: "Trebit POS",
       posLabel: "Point of sale",
       erp: "ERP",
-      erpLabel: "KuBIT ERP or your system",
+      erpLabel: "ERP or your system",
       flowOut: "sales →",
       flowIn: "← items and prices",
       points: ["Items and prices come from the ERP", "Every sale becomes a document", "Multiple registers and branches under one business"],

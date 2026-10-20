@@ -78,7 +78,9 @@ export function Header({ scrolled, open, onToggle }: HeaderProps) {
           className="nav-links"
           aria-label="Kryesore"
         >
-          {t.nav.groups.map((group, groupIndex) => (
+          {t.nav.groups.map((group, groupIndex) => group.href ? (
+            <a className="nav-menu-trigger nav-menu-trigger--link" href={group.href} key={group.label}>{group.label}</a>
+          ) : (
             <div
               className={`nav-menu ${activeMenu === group.label ? "is-open" : ""}`}
               key={group.label}

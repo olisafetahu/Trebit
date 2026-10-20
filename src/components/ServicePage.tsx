@@ -29,14 +29,6 @@ export function ServicePage({ kind }: ServicePageProps) {
           <p>{page.intro}</p>
         </section>
         <About />
-        <section className="partners-page-section" id="partneret">
-          <div className="section-head">
-            <h2>{page.partnersTitle}</h2>
-          </div>
-          <div className="partners-page-grid">
-            {page.partners.map((partner) => <span key={partner}>{partner}</span>)}
-          </div>
-        </section>
         <ContactCta />
       </main>
     )

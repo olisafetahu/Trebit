@@ -17,7 +17,7 @@ export type Dictionary = {
     contact: string
     login: string
     demo: string
-    groups: { label: string; items: { label: string; href: string; description?: string }[] }[]
+    groups: { label: string; href?: string; items: { label: string; href: string; description?: string }[] }[]
   }
   loginModal: {
     title: string
@@ -77,7 +77,7 @@ export type Dictionary = {
   servicePages: {
     it: { eyebrow: string; title: string; intro: string; items: { title: string; text: string; points?: string[] }[] }
     support: { eyebrow: string; title: string; intro: string; items: { title: string; text: string }[] }
-    about: { eyebrow: string; title: string; intro: string; partnersTitle: string; partners: string[] }
+    about: { eyebrow: string; title: string; intro: string }
   }
   industries: {
     title: string
@@ -137,7 +137,6 @@ export type Dictionary = {
   about: {
     title: string
     text: string
-    kubit: string
   }
   cta: {
     title: string
@@ -160,7 +159,6 @@ export type Dictionary = {
     sending: string
     error: string
     types: string[]
-    websiteLabel: string
     emailLabel: string
     phoneLabel: string
     comingSoon: string
@@ -169,7 +167,6 @@ export type Dictionary = {
     blurb: string
     privacy: string
     terms: string
-    kubit: string
     copyright: string
   }
   home: {
