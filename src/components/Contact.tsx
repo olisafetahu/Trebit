@@ -9,35 +9,39 @@ export function Contact() {
   const { t, locale } = useI18n()
   const { ref, visible } = useReveal<HTMLElement>()
   const [sent, setSent] = useState(false)
-  const [sending, setSending] = useState(false)
-  const [failed, setFailed] = useState(false)
 
   const packageOptions = useMemo(
     () => packages.map((pkg) => t.pricing.items[pkg.id].name),
     [t],
   )
 
-  const onSubmit = async (event: FormEvent<HTMLFormElement>) => {
+  const onSubmit = (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault()
-    if (sending) return
     const formEl = event.currentTarget
-    const payload = Object.fromEntries(new FormData(formEl).entries())
-    setSending(true)
-    setFailed(false)
-    try {
-      const response = await fetch("/api/contact", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(payload),
-      })
-      if (!response.ok) throw new Error(String(response.status))
-      setSent(true)
-      formEl.reset()
-    } catch {
-      setFailed(true)
-    } finally {
-      setSending(false)
-    }
+    const data = Object.fromEntries(new FormData(formEl).entries()) as Record<string, string>
+    // Honeypot: real visitors never fill this hidden field
+    if (data.company) return
+    const sq = locale === "sq"
+    const fields = [
+      [sq ? "Emri dhe Mbiemri" : "Full name", data.name],
+      [sq ? "Telefoni" : "Phone", data.phone],
+      ["Email", data.email],
+      [sq ? "Biznesi" : "Business", data.business],
+      [sq ? "Lloji i biznesit" : "Business type", data.type],
+      [sq ? "Paketa" : "Package", data.package],
+    ]
+    const text = [
+      sq ? "Kërkesë e re nga faqja Trebit" : "New request from the Trebit website",
+      "",
+      ...fields.filter(([, value]) => value).map(([label, value]) => `${label}: ${value}`),
+      "",
+      `${sq ? "Mesazhi" : "Message"}:`,
+      data.message,
+    ].join("\n")
+    const url = `https://wa.me/${contact.messengerNumber}?text=${encodeURIComponent(text)}`
+    if (!window.open(url, "_blank", "noopener")) window.location.href = url
+    setSent(true)
+    formEl.reset()
   }
 
   return (
@@ -128,10 +132,9 @@ export function Contact() {
               <textarea name="message" rows={4} required />
             </label>
             <input className="form-hp" name="company" tabIndex={-1} autoComplete="off" aria-hidden="true" />
-            <button className="btn btn-primary" type="submit" disabled={sending}>
-              {sending ? t.contact.sending : t.contact.submit}
+            <button className="btn btn-primary" type="submit">
+              {t.contact.submit}
             </button>
-            {failed && <p className="form-error" role="alert">{t.contact.error}</p>}
           </form>
         )}
       </div>

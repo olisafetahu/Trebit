@@ -395,7 +395,7 @@ export const sq: Dictionary = {
     package: "Paketa që të intereson",
     message: "Mesazhi",
     submit: "Dërgo kërkesën",
-    success: "Faleminderit. Kërkesa u dërgua. Ekipi i Trebit do të të kontaktojë shumë shpejt.",
+    success: "Faleminderit. U hap WhatsApp-i me kërkesën tënde, shtyp Dërgo për ta përfunduar. Ekipi i Trebit do të të përgjigjet shumë shpejt.",
     sending: "Po dërgohet…",
     error: "Nuk e dërguam dot kërkesën. Provo përsëri ose na kontakto me telefon ose email.",
     types: ["Shërbime", "Berber", "Sallon bukurie", "Free Shop", "Butik", "Farmaci", "Market", "Retail", "Tjetër"],
