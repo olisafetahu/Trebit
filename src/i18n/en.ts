@@ -284,7 +284,7 @@ export const en: Dictionary = {
     package: "Package of interest",
     message: "Message",
     submit: "Send request",
-    success: "Thank you. WhatsApp opened with your request, press Send to finish. The Trebit team will reply very soon.",
+    success: "Thank you. Your request was sent. WhatsApp also opened, press Send for an even faster reply from the Trebit team.",
     sending: "Sending…",
     error: "We couldn't send your request. Try again, or contact us by phone or email.",
     types: ["Services", "Barber", "Beauty salon", "Free Shop", "Boutique", "Pharmacy", "Market", "Retail", "Other"],

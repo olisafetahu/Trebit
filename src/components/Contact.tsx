@@ -39,6 +39,13 @@ export function Contact() {
       data.message,
     ].join("\n")
     const url = `https://wa.me/${contact.messengerNumber}?text=${encodeURIComponent(text)}`
+    // Email goes out in the background so the request is never lost, even if WhatsApp is closed unsent
+    fetch("/api/contact", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(data),
+      keepalive: true,
+    }).catch(() => {})
     if (!window.open(url, "_blank", "noopener")) window.location.href = url
     setSent(true)
     formEl.reset()
