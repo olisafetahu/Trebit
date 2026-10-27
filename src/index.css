@@ -3107,3 +3107,13 @@ a.hardware-product-card:hover {
   .visual--md { min-height: 140px; }
   .service-facts { margin-bottom: 36px; }
 }
+
+/* Header logo: app icon */
+.logo-icon {
+  width: 44px;
+  height: 44px;
+}
+
+@media (max-width: 800px) {
+  .logo-icon { width: 40px; height: 40px; }
+}
