@@ -161,7 +161,9 @@ export const sq: Dictionary = {
     },
   },
   servicePages: {
+    more: "Shiko më shumë",
     it: {
+      facts: ["Monitorim 24/7", "Backup automatik", "Siguri dhe VPN", "Integrime ERP dhe POS"],
       eyebrow: "Shërbime IT",
       title: "Teknologjia që e mban biznesin në lëvizje.",
       intro: "Nga infrastruktura dhe cloud-i te siguria, integrimet dhe automatizimi, Trebit ju ndihmon ta mbani teknologjinë të qëndrueshme dhe të gatshme për rritje.",
@@ -175,6 +177,7 @@ export const sq: Dictionary = {
       ],
     },
     support: {
+      facts: ["Përgjigje me WhatsApp", "Ndihmë në distancë", "Ticket i ndjekur deri në fund", "Udhëzime praktike"],
       eyebrow: "Support",
       title: "Ndihmë kur ju nevojitet.",
       intro: "Një pikë e vetme kontakti për kërkesat, asistencën teknike dhe materialet që e ndihmojnë ekipin tuaj të vazhdojë punën.",

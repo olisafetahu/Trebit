@@ -10,6 +10,7 @@ import {
 } from "lucide-react"
 import { useI18n } from "../i18n"
 import { useReveal } from "../hooks/useReveal"
+import { Visual, tones } from "./Visual"
 
 const glyphs = {
   services: BriefcaseBusiness,
@@ -33,14 +34,9 @@ export function Industries() {
         <h2>{t.industries.title}</h2>
       </div>
       <div className="industry-grid">
-        {keys.map((key) => (
+        {keys.map((key, index) => (
           <article key={key} className="industry-card">
-            <span className="industry-glyph" aria-hidden="true">
-              {(() => {
-                const Icon = glyphs[key]
-                return <Icon size={24} strokeWidth={1.7} />
-              })()}
-            </span>
+            <Visual icon={glyphs[key]} tone={tones[index % tones.length]} size="sm" />
             <h3>{t.industries.items[key].title}</h3>
             <p>{t.industries.items[key].text}</p>
           </article>

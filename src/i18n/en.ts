@@ -106,7 +106,9 @@ export const en: Dictionary = {
     },
   },
   servicePages: {
+    more: "See more",
     it: {
+      facts: ["24/7 monitoring", "Automatic backup", "Security and VPN", "ERP and POS integrations"],
       eyebrow: "IT Services",
       title: "Technology that keeps your business moving.",
       intro: "From infrastructure and cloud to security, integrations and automation, Trebit keeps your technology stable and ready to grow.",
@@ -120,6 +122,7 @@ export const en: Dictionary = {
       ],
     },
     support: {
+      facts: ["WhatsApp replies", "Remote help", "Tickets followed to the end", "Practical guides"],
       eyebrow: "Support",
       title: "Help when you need it.",
       intro: "One place for requests, technical assistance and resources that help your team keep working.",

@@ -1,8 +1,9 @@
 import { useEffect } from "react"
-import { ArrowRight, BarChart3, Coffee, ShoppingCart } from "lucide-react"
+import { ArrowRight, BarChart3, ChevronDown, Coffee, ShoppingCart } from "lucide-react"
 import { Pricing } from "./Pricing"
 import { useI18n } from "../i18n"
 import { useReveal } from "../hooks/useReveal"
+import { splitText } from "./ServicePage"
 
 const products = [
   { key: "erp" as const, image: "/ERPDashboard.png", icon: BarChart3 },
@@ -29,13 +30,20 @@ export function PackagesPage() {
       <section className={`packages-products ${visible ? "is-in" : ""}`}>
         {products.map(({ key, image, icon: Icon }) => {
           const product = t.packagesPage[key]
+          const { lead, rest } = splitText(product.text)
           return (
             <article id={`kubit-${key}`} className={`packages-product packages-product--${key}`} key={key}>
               <div className="packages-product-copy">
                 <span className="packages-product-icon"><Icon size={24} /></span>
                 <span className="eyebrow">{product.label}</span>
                 <h2 id={key === "erp" ? "fiskalizimi" : undefined}>{product.title}</h2>
-                <p>{product.text}</p>
+                <p>{lead}</p>
+                {rest && (
+                  <details className="service-more">
+                    <summary>{t.servicePages.more}<ChevronDown size={16} /></summary>
+                    <p>{rest}</p>
+                  </details>
+                )}
               </div>
               <div className="packages-product-image"><img src={image} alt={product.title} /></div>
             </article>

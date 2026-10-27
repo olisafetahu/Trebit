@@ -2935,3 +2935,175 @@ a.hardware-product-card:hover {
   max-height: 360px;
   object-position: center bottom;
 }
+
+/* ---- Visual placeholders, service pages, industries ---- */
+.visual {
+  --v1: #5340ff;
+  --v2: #8a7dff;
+  position: relative;
+  display: grid;
+  overflow: hidden;
+  place-items: center;
+  border-radius: 14px;
+  background: linear-gradient(145deg, var(--v1), var(--v2));
+}
+
+.visual--mint { --v1: #0ea884; --v2: #4fe0bd; }
+.visual--gold { --v1: #d99a2b; --v2: #f3cf7a; }
+.visual--coral { --v1: #e5553a; --v2: #ff9a80; }
+
+.visual--sm { height: 110px; }
+.visual--md { min-height: 240px; height: 100%; }
+.visual--lg { min-height: 320px; border-radius: 18px; }
+
+.visual-ring {
+  position: absolute;
+  border: 28px solid rgba(255, 255, 255, 0.14);
+  border-radius: 50%;
+}
+
+.visual-ring--a { right: -60px; bottom: -70px; width: 200px; height: 200px; }
+.visual-ring--b { left: -40px; top: -50px; width: 120px; height: 120px; border-width: 18px; }
+
+.visual-dots {
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(rgba(255, 255, 255, 0.28) 1.2px, transparent 1.4px);
+  background-size: 18px 18px;
+  mask-image: linear-gradient(120deg, transparent 35%, #000);
+}
+
+.visual-tile {
+  position: relative;
+  display: grid;
+  width: 72px;
+  height: 72px;
+  place-items: center;
+  border-radius: 18px;
+  color: #fff;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(4px);
+  box-shadow: 0 8px 24px rgba(22, 24, 58, 0.18);
+}
+
+.visual-tile svg { width: 34px; height: 34px; }
+.visual--sm .visual-tile { width: 52px; height: 52px; border-radius: 14px; }
+.visual--sm .visual-tile svg { width: 26px; height: 26px; }
+.visual--lg .visual-tile { width: 108px; height: 108px; border-radius: 26px; }
+.visual--lg .visual-tile svg { width: 52px; height: 52px; }
+
+.service-hero {
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  gap: 48px;
+  align-items: center;
+  margin: 0 0 32px;
+}
+
+.service-hero-copy h1 {
+  margin: 14px 0;
+  font-size: clamp(2rem, 4.4vw, 3.4rem);
+  line-height: 1.08;
+  font-weight: 600;
+}
+
+.service-hero-copy p {
+  margin: 0;
+  color: var(--ink-soft);
+  font-size: 1.08rem;
+}
+
+.service-facts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 0 0 56px;
+  padding: 0;
+  list-style: none;
+}
+
+.service-facts li {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 9px 14px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--white);
+  font-weight: 600;
+  font-size: 0.92rem;
+}
+
+.service-facts svg { color: var(--mint-2); }
+
+.service-rows {
+  display: grid;
+  gap: 20px;
+}
+
+.service-row {
+  display: grid;
+  grid-template-columns: 0.8fr 1.2fr;
+  gap: 28px;
+  align-items: stretch;
+  scroll-margin-top: 100px;
+  padding: 18px;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  background: var(--white);
+}
+
+.service-row:nth-child(even) { grid-template-columns: 1.2fr 0.8fr; }
+.service-row:nth-child(even) .visual { order: 2; }
+
+.service-row-copy {
+  align-self: center;
+  padding: 8px 10px;
+}
+
+.service-row-copy h2 {
+  margin: 0 0 8px;
+  font-size: clamp(1.25rem, 2vw, 1.55rem);
+}
+
+.service-row-copy p {
+  margin: 0;
+  color: var(--ink-soft);
+  line-height: 1.65;
+}
+
+.service-more {
+  margin-top: 14px;
+}
+
+.service-more summary {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--brand);
+  font-weight: 600;
+  cursor: pointer;
+  list-style: none;
+}
+
+.service-more summary::-webkit-details-marker { display: none; }
+.service-more summary svg { transition: transform 0.2s ease; }
+.service-more[open] summary svg { transform: rotate(180deg); }
+.service-more > p { margin-top: 12px; }
+.service-more .service-page-points { margin-top: 14px; }
+
+.industry-card .visual {
+  margin: -4px -4px 14px;
+}
+
+.packages-product-copy .service-more { margin-top: 16px; }
+
+@media (max-width: 800px) {
+  .service-hero { grid-template-columns: 1fr; gap: 24px; }
+  .visual--lg { min-height: 200px; order: -1; }
+  .service-row,
+  .service-row:nth-child(even) { grid-template-columns: 1fr; gap: 14px; }
+  .service-row:nth-child(even) .visual { order: 0; }
+  .visual--md { min-height: 140px; }
+  .service-facts { margin-bottom: 36px; }
+}

@@ -86,8 +86,9 @@ export type Dictionary = {
     }
   }
   servicePages: {
-    it: { eyebrow: string; title: string; intro: string; items: { title: string; text: string; points?: string[] }[] }
-    support: { eyebrow: string; title: string; intro: string; items: { title: string; text: string }[] }
+    more: string
+    it: { eyebrow: string; title: string; intro: string; facts: string[]; items: { title: string; text: string; points?: string[] }[] }
+    support: { eyebrow: string; title: string; intro: string; facts: string[]; items: { title: string; text: string }[] }
     about: { eyebrow: string; title: string; intro: string }
   }
   industries: {
