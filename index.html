@@ -2,11 +2,11 @@
 <html lang="sq">
   <head>
     <script>
+      var t = "dark"
       try {
-        var t = localStorage.getItem("trebit-theme")
-        if (!t) t = "light"
-        document.documentElement.setAttribute("data-theme", t)
+        t = localStorage.getItem("trebit-theme") || "dark"
       } catch (e) {}
+      document.documentElement.setAttribute("data-theme", t)
     </script>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/png" sizes="48x48" href="/favicon-48.png" />
@@ -22,7 +22,7 @@
       name="keywords"
       content="softuer për biznes, program për biznes, program për shitje, fiskalizim Kosovë, menaxhim stoku, program për market, program për farmaci, POS Kosovë, softuer për shitje, menaxhim biznesi, softuer biznesi Kosovë"
     />
-    <meta name="theme-color" content="#f7f8fc" />
+    <meta name="theme-color" content="#0f0d24" />
     <meta property="og:title" content="Trebit – Softuer modern për menaxhimin e biznesit" />
     <meta
       property="og:description"
