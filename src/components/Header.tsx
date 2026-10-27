@@ -43,14 +43,11 @@ export function Header({ scrolled, open, onToggle }: HeaderProps) {
     }
   }, [])
 
-  const handleMenuTriggerClick = (event: ReactMouseEvent<HTMLButtonElement>, label: string) => {
+  const groupPath = (items: { href: string }[]) => items[0]?.href.split("#")[0] ?? "/"
+
+  const handleMenuTriggerClick = (event: ReactMouseEvent<HTMLButtonElement>, path: string) => {
     event.stopPropagation()
-    const shouldClose = lockedMenu === label
-    setLockedMenu(shouldClose ? null : label)
-    if (shouldClose) {
-      setHoveredMenu(null)
-      event.currentTarget.blur()
-    }
+    window.location.assign(path)
   }
 
   const handleMenuEnter = (label: string, fromTrigger: boolean) => {
@@ -93,7 +90,7 @@ export function Header({ scrolled, open, onToggle }: HeaderProps) {
                 aria-haspopup="true"
                 onMouseEnter={() => handleMenuEnter(group.label, true)}
                 aria-expanded={activeMenu === group.label}
-                onClick={(event) => handleMenuTriggerClick(event, group.label)}
+                onClick={(event) => handleMenuTriggerClick(event, groupPath(group.items))}
               >
                 {group.label}
               </button>
@@ -107,7 +104,7 @@ export function Header({ scrolled, open, onToggle }: HeaderProps) {
                     <span><strong>{item.label}</strong>{item.description && <small>{item.description}</small>}</span>
                   </a>
                 )})}
-                <a className="nav-menu-all" href={group.items[0]?.href} onClick={() => setLockedMenu(null)}>Shiko të gjitha {group.label}</a>
+                <a className="nav-menu-all" href={groupPath(group.items)} onClick={() => setLockedMenu(null)}>Shiko të gjitha {group.label}</a>
               </div>
             </div>
           ))}

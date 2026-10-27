@@ -55,6 +55,17 @@ export type Dictionary = {
       { title: string; text: string }
     >
   }
+  productDetail: {
+    back: string
+    category: string
+    price: string
+    priceOnRequest: string
+    quote: string
+    quoteMessage: string
+    related: string
+    intro: string
+    notFound: string
+  }
   productPage: {
     eyebrow: string
     title: string
@@ -159,6 +170,8 @@ export type Dictionary = {
     sending: string
     error: string
     types: string[]
+    request: string
+    requests: { quote: string; support: string; partnership: string; other: string }
     emailLabel: string
     phoneLabel: string
     comingSoon: string

@@ -20,10 +20,10 @@ export function HardwareProducts() {
             <h3 className="hardware-category-title">{t.productPage.hardwareProducts.categories[category.id] || category.title}</h3>
             <div className="hardware-products-grid">
               {category.products.map((product) => (
-                <article key={product.id} className="hardware-product-card">
+                <a key={product.id} className="hardware-product-card" href={`/produkti/${product.id}`}>
                   <div className="hardware-product-image">
                     {product.image ? (
-                      <img src={product.image} alt={product.name} />
+                      <img src={product.image} alt={product.name} loading="lazy" />
                     ) : (
                       <div className="hardware-product-placeholder">
                         <ImagePlus size={32} />
@@ -35,7 +35,7 @@ export function HardwareProducts() {
                     <h4 className="hardware-product-name">{product.name}</h4>
                     <p className="hardware-product-description">{product.description}</p>
                   </div>
-                </article>
+                </a>
               ))}
             </div>
           </div>

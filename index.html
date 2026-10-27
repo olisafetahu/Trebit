@@ -4,12 +4,13 @@
     <script>
       try {
         var t = localStorage.getItem("trebit-theme")
-        if (!t) t = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light"
+        if (!t) t = "light"
         document.documentElement.setAttribute("data-theme", t)
       } catch (e) {}
     </script>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/logo-pa-background.png" />
+    <link rel="icon" type="image/png" sizes="48x48" href="/favicon-48.png" />
+    <link rel="apple-touch-icon" href="/favicon.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Trebit – Softuer modern për menaxhimin e biznesit</title>
     <meta
@@ -27,8 +28,15 @@
       content="Trebit është platformë moderne për shitje, fiskalizim, stok, financa, raporte dhe menaxhim të biznesit në Kosovë."
     />
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://www.kubit-ks.com" />
+    <meta property="og:url" content="https://trebit.ai" />
     <meta property="og:locale" content="sq_XK" />
+    <meta property="og:site_name" content="Trebit" />
+    <meta property="og:image" content="https://trebit.ai/ERPDashboard.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Trebit – Softuer modern për menaxhimin e biznesit" />
+    <meta name="twitter:image" content="https://trebit.ai/ERPDashboard.png" />
+    <link rel="canonical" href="https://trebit.ai/" />
+    <script defer data-domain="trebit.ai" src="https://plausible.io/js/script.js"></script>
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -37,7 +45,7 @@
         "applicationCategory": "BusinessApplication",
         "operatingSystem": "Web",
         "description": "Trebit është platformë moderne për shitje, fiskalizim, stok, financa, raporte dhe menaxhim të biznesit në Kosovë.",
-        "url": "https://www.kubit-ks.com",
+        "url": "https://trebit.ai",
         "inLanguage": "sq"
       }
     </script>

@@ -9,7 +9,9 @@ import { ErpDashboardSection } from "./components/ErpDashboardSection"
 import { LegalPage } from "./components/LegalPage"
 import { LoginModal } from "./components/LoginModal"
 import { TrustStrip } from "./components/TrustStrip"
+import { MobileNavGroups } from "./components/MobileNavGroups"
 import { ProductPage } from "./components/ProductPage"
+import { ProductDetailPage } from "./components/ProductDetailPage"
 import { PackagesPage } from "./components/PackagesPage"
 import { Industries } from "./components/Industries"
 import { ErpIntegration } from "./components/ErpIntegration"
@@ -24,7 +26,9 @@ export default function App() {
   const [menuOpen, setMenuOpen] = useState(false)
   const [loginOpen, setLoginOpen] = useState(false)
   const [legal, setLegal] = useState<"privacy" | "terms" | null>(null)
+  const productSlug = (path: string) => (path.toLowerCase().startsWith("/produkti/") ? path.slice("/produkti/".length).replace(/\/$/, "") : null)
   const [productPage, setProductPage] = useState(() => window.location.pathname.toLowerCase() === "/produkti")
+  const [productDetail, setProductDetail] = useState<string | null>(() => productSlug(window.location.pathname))
   const [packagesPage, setPackagesPage] = useState(() => window.location.pathname.toLowerCase() === "/pakot")
   const [servicePage, setServicePage] = useState<"it" | "support" | "about" | null>(() => {
     const path = window.location.pathname.toLowerCase()
@@ -32,13 +36,14 @@ export default function App() {
   })
 
   useEffect(() => {
+    document.documentElement.lang = locale === "sq" ? "sq" : "en"
+    if (productDetail) return
     document.title = t.meta.title
     const desc = document.querySelector('meta[name="description"]')
     if (desc) desc.setAttribute("content", t.meta.description)
     const keywords = document.querySelector('meta[name="keywords"]')
     if (keywords) keywords.setAttribute("content", t.meta.keywords)
-    document.documentElement.lang = locale === "sq" ? "sq" : "en"
-  }, [t, locale])
+  }, [t, locale, productDetail])
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 12)
@@ -50,6 +55,7 @@ export default function App() {
   useEffect(() => {
     const onPopState = () => {
       setProductPage(window.location.pathname.toLowerCase() === "/produkti")
+      setProductDetail(productSlug(window.location.pathname))
       setPackagesPage(window.location.pathname.toLowerCase() === "/pakot")
       const path = window.location.pathname.toLowerCase()
       setServicePage(path === "/sherbime-it" ? "it" : path === "/support" ? "support" : path === "/rreth-nesh" ? "about" : null)
@@ -92,18 +98,7 @@ export default function App() {
       />
       {menuOpen && (
         <div className="mobile-drawer">
-          {t.nav.groups.map((group) => (
-            <div className="mobile-nav-group" key={group.label}>
-              {group.href ? (
-                <a href={group.href} onClick={() => setMenuOpen(false)}><strong>{group.label}</strong></a>
-              ) : <>
-                <strong>{group.label}</strong>
-                {group.items.map((item) => (
-                  <a href={item.href} key={item.label} onClick={() => setMenuOpen(false)}>{item.label}</a>
-                ))}
-              </>}
-            </div>
-          ))}
+          <MobileNavGroups onNavigate={() => setMenuOpen(false)} />
           <a
             className="btn btn-primary"
             href={productPage || packagesPage ? "/#kontakt" : "#kontakt"}
@@ -124,7 +119,9 @@ export default function App() {
           </a>
         </div>
       )}
-      {productPage ? (
+      {productDetail ? (
+        <ProductDetailPage slug={productDetail} />
+      ) : productPage ? (
         <ProductPage />
       ) : packagesPage ? (
         <PackagesPage />

@@ -9,6 +9,10 @@ export function Contact() {
   const { t, locale } = useI18n()
   const { ref, visible } = useReveal<HTMLElement>()
   const [sent, setSent] = useState(false)
+  const [request, setRequest] = useState("quote")
+  const product = useMemo(() => new URLSearchParams(window.location.search).get("produkt")?.slice(0, 120) ?? "", [])
+  const defaultMessage = product ? `${t.productDetail.quoteMessage} ${product}` : ""
+  const needsPackage = request === "quote"
 
   const packageOptions = useMemo(
     () => packages.map((pkg) => t.pricing.items[pkg.id].name),
@@ -27,6 +31,7 @@ export function Contact() {
       [sq ? "Telefoni" : "Phone", data.phone],
       ["Email", data.email],
       [sq ? "Biznesi" : "Business", data.business],
+      [sq ? "Lloji i kërkesës" : "Request", t.contact.requests[data.request as keyof typeof t.contact.requests]],
       [sq ? "Lloji i biznesit" : "Business type", data.type],
       [sq ? "Paketa" : "Package", data.package],
     ]
@@ -112,6 +117,14 @@ export function Contact() {
                 title={locale === "sq" ? "Shkruaj një email të vlefshëm, p.sh. emri@kompania.com" : "Enter a valid email, e.g. name@company.com"}
               />
             </label>
+            <label className="form-full">
+              <span>{t.contact.request}</span>
+              <select name="request" value={request} onChange={(event) => setRequest(event.target.value)}>
+                {(Object.keys(t.contact.requests) as Array<keyof typeof t.contact.requests>).map((key) => (
+                  <option key={key} value={key}>{t.contact.requests[key]}</option>
+                ))}
+              </select>
+            </label>
             <label>
               <span>{t.contact.type}<span className="req" aria-hidden="true"> *</span></span>
               <select name="type" required defaultValue="">
@@ -124,8 +137,8 @@ export function Contact() {
               </select>
             </label>
             <label>
-              <span>{t.contact.package}<span className="req" aria-hidden="true"> *</span></span>
-              <select name="package" required defaultValue="">
+              <span>{t.contact.package}{needsPackage && <span className="req" aria-hidden="true"> *</span>}</span>
+              <select name="package" required={needsPackage} defaultValue="">
                 <option value="" disabled>
                   —
                 </option>
@@ -136,7 +149,7 @@ export function Contact() {
             </label>
             <label className="form-full">
               <span>{t.contact.message}<span className="req" aria-hidden="true"> *</span></span>
-              <textarea name="message" rows={4} required />
+              <textarea name="message" rows={4} required defaultValue={defaultMessage} />
             </label>
             <input className="form-hp" name="company" tabIndex={-1} autoComplete="off" aria-hidden="true" />
             <button className="btn btn-primary" type="submit">
