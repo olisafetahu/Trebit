@@ -5,6 +5,8 @@ export type HardwareProduct = {
   name: string
   description: string
   image?: string
+  // Source photo is cut at the bottom edge, so the card sits it flush against the frame
+  cropBottom?: boolean
 }
 
 export type HardwareCategoryData = {
@@ -124,7 +126,8 @@ export const hardwareCategories: HardwareCategoryData[] = [
         id: "p8100p",
         name: "P8100P",
         description: "2D, 10\", a13, 4/64, WiFi, 4G, 10000mAH, cable, PSU(EU), X strap.",
-        image: "/p8100p.png"
+        image: "/p8100p.png",
+        cropBottom: true
       }
     ]
   }

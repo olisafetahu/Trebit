@@ -2915,3 +2915,23 @@ a.hardware-product-card:hover {
 .nav--open .nav-burger span:nth-child(2) { opacity: 0; }
 .nav--open .nav-burger span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
 .nav-burger span { transition: transform 0.2s ease, opacity 0.2s ease; }
+
+/* Photos cut at the bottom sit flush with the frame so the crop looks intentional */
+.hardware-product-image.is-cropped-bottom {
+  height: auto;
+}
+
+.hardware-product-image.is-cropped-bottom img {
+  height: auto;
+  padding: 16px 20px 0;
+}
+
+.product-detail-image.is-cropped-bottom {
+  padding-bottom: 0;
+  place-items: end center;
+}
+
+.product-detail-image.is-cropped-bottom img {
+  max-height: 360px;
+  object-position: center bottom;
+}

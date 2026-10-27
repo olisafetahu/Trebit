@@ -21,7 +21,7 @@ export function HardwareProducts() {
             <div className="hardware-products-grid">
               {category.products.map((product) => (
                 <a key={product.id} className="hardware-product-card" href={`/produkti/${product.id}`}>
-                  <div className="hardware-product-image">
+                  <div className={`hardware-product-image ${product.cropBottom ? "is-cropped-bottom" : ""}`}>
                     {product.image ? (
                       <img src={product.image} alt={product.name} loading="lazy" />
                     ) : (

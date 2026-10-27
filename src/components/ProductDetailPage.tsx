@@ -28,7 +28,7 @@ export function ProductDetailPage({ slug }: { slug: string }) {
     <main className="product-detail">
       <a className="product-detail-back" href={`/produkti#${category.id}`}><ArrowLeft size={16} /> {labels.back}</a>
       <div className="product-detail-grid">
-        <div className="product-detail-image">
+        <div className={`product-detail-image ${product.cropBottom ? "is-cropped-bottom" : ""}`}>
           {product.image && <img src={product.image} alt={product.name} />}
         </div>
         <div className="product-detail-info">
@@ -49,7 +49,7 @@ export function ProductDetailPage({ slug }: { slug: string }) {
           <div className="hardware-products-grid">
             {related.map((item) => (
               <a key={item.id} className="hardware-product-card" href={`/produkti/${item.id}`}>
-                <div className="hardware-product-image">{item.image && <img src={item.image} alt={item.name} loading="lazy" />}</div>
+                <div className={`hardware-product-image ${item.cropBottom ? "is-cropped-bottom" : ""}`}>{item.image && <img src={item.image} alt={item.name} loading="lazy" />}</div>
                 <div className="hardware-product-info"><h3 className="hardware-product-name">{item.name}</h3></div>
               </a>
             ))}
