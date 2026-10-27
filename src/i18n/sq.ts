@@ -397,6 +397,9 @@ export const sq: Dictionary = {
     related: "Pajisje të ngjashme",
     intro: "Na shkruaj dhe të kthejmë çmimin, disponueshmërinë dhe kohën e dorëzimit.",
     notFound: "Kjo pajisje nuk u gjet.",
+    specs: "Specifikimet",
+    source: "Burimi: faqja zyrtare e prodhuesit",
+    sourceDistributor: "Burimi: faqja e distributorit",
   },
   contact: {
     title: "Na trego për biznesin tënd",

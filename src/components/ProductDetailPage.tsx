@@ -1,10 +1,11 @@
 import { useEffect } from "react"
-import { ArrowLeft, MessageSquareQuote } from "lucide-react"
+import { ArrowLeft, ExternalLink, MessageSquareQuote } from "lucide-react"
 import { hardwareCategories } from "../data/hardware"
 import { useI18n } from "../i18n"
+import { specLabel } from "../data/specLabels"
 
 export function ProductDetailPage({ slug }: { slug: string }) {
-  const { t } = useI18n()
+  const { t, locale } = useI18n()
   const category = hardwareCategories.find((c) => c.products.some((p) => p.id === slug))
   const product = category?.products.find((p) => p.id === slug)
   const labels = t.productDetail
@@ -43,6 +44,19 @@ export function ProductDetailPage({ slug }: { slug: string }) {
           <a className="btn btn-primary btn-lg" href={quoteHref}><MessageSquareQuote size={18} /> {labels.quote}</a>
         </div>
       </div>
+      {product.specs && product.specs.length > 0 && (
+        <section className="product-specs">
+          <h2>{labels.specs}</h2>
+          <dl className="product-specs-table">
+            {product.specs.map((spec) => (
+              <div key={spec.label}><dt>{specLabel(spec.label, locale)}</dt><dd>{spec.value}</dd></div>
+            ))}
+          </dl>
+          {product.sourceUrl && (
+            <a className="product-specs-source" href={product.sourceUrl} target="_blank" rel="noopener noreferrer">{product.sourceKind === "distributor" ? labels.sourceDistributor : labels.source} <ExternalLink size={14} /></a>
+          )}
+        </section>
+      )}
       {related.length > 0 && (
         <section className="product-detail-related">
           <h2>{labels.related}</h2>

@@ -286,6 +286,9 @@ export const en: Dictionary = {
     related: "Similar hardware",
     intro: "Write to us and we will send price, availability and delivery time.",
     notFound: "This product was not found.",
+    specs: "Specifications",
+    source: "Source: official manufacturer page",
+    sourceDistributor: "Source: distributor page",
   },
   contact: {
     title: "Tell us about your business",

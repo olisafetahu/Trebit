@@ -3391,3 +3391,67 @@ a.hardware-product-card:hover {
   .hero-shot-tile { min-height: 120px; }
   .hero-tab { min-width: 0; padding: 0 12px; }
 }
+
+/* ---- Product specifications ---- */
+.product-specs {
+  margin-top: 56px;
+}
+
+.product-specs h2 {
+  margin: 0 0 16px;
+  font-size: 1.4rem;
+}
+
+.product-specs-table {
+  display: grid;
+  margin: 0;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: var(--white);
+  overflow: hidden;
+}
+
+.product-specs-table > div {
+  display: grid;
+  grid-template-columns: minmax(130px, 0.35fr) 1fr;
+  gap: 20px;
+  padding: 13px 20px;
+  border-bottom: 1px solid var(--line);
+}
+
+.product-specs-table > div:nth-child(even) {
+  background: var(--paper);
+}
+
+.product-specs-table > div:last-child {
+  border-bottom: 0;
+}
+
+.product-specs-table dt {
+  color: var(--ink-soft);
+  font-weight: 600;
+}
+
+.product-specs-table dd {
+  margin: 0;
+}
+
+.product-specs-source {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 14px;
+  color: var(--ink-soft);
+  font-size: 0.9rem;
+}
+
+.product-specs-source:hover {
+  color: var(--brand);
+}
+
+@media (max-width: 800px) {
+  .product-specs-table > div {
+    grid-template-columns: 1fr;
+    gap: 2px;
+  }
+}

@@ -65,6 +65,9 @@ export type Dictionary = {
     related: string
     intro: string
     notFound: string
+    specs: string
+    source: string
+    sourceDistributor: string
   }
   productPage: {
     eyebrow: string
